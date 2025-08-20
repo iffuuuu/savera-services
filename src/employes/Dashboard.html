@@ -1,0 +1,482 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>SaveraServices — Billing Dashboard</title>
+  <link href="dashboard.css" rel="stylesheet" />
+</head>
+<body>
+
+  <div class="container">
+    <header>
+      <div class="brand">
+        <img src="logo.png" alt="logo">
+        <div>
+          <h1 id="printTitle">Savera Services</h1>
+          <p class="muted" id="printSubtitle">Repair & Service — Quote & Billing Dashboard</p>
+        </div>
+      </div>
+      <div style="display:flex;gap:12px;align-items:center">
+        <div class="muted" style="font-size:13px">Signed in as <strong id="empNameTop">Employee</strong></div>
+        <button class="btn-outline" id="signOutBtn" title="Sign out" style="display:none">Sign out</button>
+      </div>
+    </header>
+
+    <div class="card products-card">
+      <div style="display:flex;justify-content:space-between;align-items:center;margin-bottom:8px">
+        <h2 style="margin:0;font-size:17px">Products & Services</h2>
+        <div class="small muted">Click row or check box to add</div>
+      </div>
+
+      <div class="top-controls" style="margin-bottom:10px">
+        <div class="search">
+          <svg xmlns="http://www.w3.org/2000/svg" style="width:18px;height:18px;margin-right:8px;opacity:.6" fill="none" viewBox="0 0 24 24" stroke="currentColor"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M21 21l-4.35-4.35M11 19a8 8 0 100-16 8 8 0 000 16z"/></svg>
+          <input placeholder="Search product or description..." id="searchInput">
+        </div>
+        <div class="controls">
+          <button id="clearAll">Clear</button>
+        </div>
+      </div>
+
+      <table id="productsTable" aria-describedby="product-list">
+        <thead>
+          <tr>
+            <th class="checkbox-cell">Add</th>
+            <th>Description</th>
+            <th class="small">Details</th>
+            <th class="price">Service Charge</th>
+          </tr>
+        </thead>
+        <tbody id="productsBody">
+        </tbody>
+      </table>
+      <div style="margin-top:10px;text-align:center" class="muted small">Tip: click on the product row to toggle selection, adjust quantity on the invoice.</div>
+    </div>
+
+    <aside class="side">
+      <div class="card profile">
+        <div class="avatar" id="avatarWrap">
+          <img id="avatarImg" src="ICON.jpg" alt="avatar">
+        </div>
+        <div style="flex:1">
+          <div class="profile-info">
+            <h3 id="empName">Employee Name</h3>
+            <p id="empRole" class="muted">Technician</p>
+          </div>
+          <div class="upload">
+            <label style="cursor:pointer;color:var(--accent);font-weight:600">
+              Upload photo
+              <input id="avatarInput" type="file" accept="image/*" style="display:none">
+            </label>
+          </div>
+        </div>
+      </div>
+
+      <div class="invoice card">
+        <h3>Invoice Preview</h3>
+        <div class="print-info-row">
+          <span class="customer-name" id="customerNamePrint"></span>
+          <span class="invoice-date" id="invoiceDatePrint"></span>
+        </div>
+        <div style="display:flex;gap:8px;margin-bottom:8px">
+          <div style="flex:1">
+            <label class="muted" style="display:block;margin-bottom:6px">Customer</label>
+            <input type="text" id="customerName" placeholder="Customer name">
+          </div>
+          <div style="width:140px">
+            <label class="muted" style="display:block;margin-bottom:6px">Date</label>
+            <input type="date" id="invoiceDate">
+          </div>
+        </div>
+
+        <table class="invoice-table" id="invoiceTable">
+          <thead>
+            <tr><th style="width:46%">Item</th><th style="width:18%">Rate</th><th class="qty">Qty</th><th style="width:20%">Amount</th></tr>
+          </thead>
+          <tbody id="invoiceBody">
+            <tr class="empty-row"><td colspan="4" class="empty">No items selected</td></tr>
+          </tbody>
+        </table>
+
+        <div class="totals">
+          <div class="row"><div class="muted">Subtotal</div><div id="subtotal">₹0</div></div>
+          <div class="row">
+            <div class="muted">Labour Charge</div>
+            <div id="labourChargeFixed">₹399</div>
+          </div>
+          <div class="row" style="font-size:17px"><div>Total</div><div id="grandTotal" style="font-weight:800">₹0</div></div>
+        </div>
+
+        <div class="actions">
+          <button class="btn-outline" id="resetInvoice">Reset</button>
+          <button class="btn-primary" id="printInvoice">Print Bill</button>
+        </div>
+      </div>
+    </aside>
+  </div>
+
+<script>
+
+  const products = [
+    {id:1, title:'check-up', desc:'check-up', price:199, category:'AC'},
+    {id:2, title:'Foam Jet Service', desc:'Foam Jet Service', price:599, category:'AC'},
+    {id:3, title:'Deep Jet Service', desc:'Deep Jet Service', price:499, category:'AC'},
+    {id:4, title:'Hand Service', desc:'Hand Service', price:499, category:'AC'},
+    {id:5, title:'Regular Maintenance', desc:'Regular Maintenance', price:499, category:'AC'},
+    {id:6, title:'Water Leakage Fix', desc:'Water Leakage Fix', price:499, category:'AC'},
+    {id:7, title:'AC Noise', desc:'AC Noise', price:499, category:'AC'},
+    {id:8, title:'AC Gas TOP-UP', desc:'AC gas TOP-UP', price:1299, category:'AC'},
+    {id:12, title:'Repair', desc:'Repair', price:1500, category:'AC'},
+    {id:9, title:'AC Full Gas charging', desc:'AC Full Gas charging', price:2199,  category:'AC'},
+    {id:10, title:'Non-Inverter PCB repaired', desc:'Main board repair (non-inverter)', price:1500, category:'AC'},
+    {id:11, title:'Inverter PCB repaired', desc:'Inverter PCB repair & testing', price:3999, category:'AC'},
+    {id:12, title:'Split AC installation', desc:'Split/window AC installation with full fitting', price:1299, category:'AC'},
+    {id:13, title:'Window AC installation', desc:'Window AC installation with full fitting', price:1199, category:'AC'},
+    {id:14, title:'AC Uninstallataion', desc:'AC Unistallation', price:599, category:'AC'},
+    {id:15, title:'Window AC Uninstallataion', desc:'Window AC Unistallation', price:599, category:'AC'},
+    {id:16, title:'Condenc er', desc:'Condencer', price:1200, category:'AC'},
+    {id:17, title:'Copper Pipe', desc:'Coper Pipe', price:299, category:'AC'},
+    
+    {id:12, title:'Repair', desc:'Repair', price:1500, category:'Fridge'},
+    {id:1, title:'check-up', desc:'check-up', price:199, category:'Fridge'},
+    {id:1, title:'servicing', desc:'servicing', price:599, category:'Fridge'},
+    {id:6, title:'Non-Inverter PCB repaired', desc:'Main board repair (non-inverter)', price:1500, category:'Fridge'},
+    {id:7, title:'Inverter PCB repaired', desc:'Inverter PCB repair & testing', price:4500, category:'Fridge'},
+    {id:7, title:'Fridge compressor replaced', desc:'Compressor replacement (fridge)', price:3899, category:'Fridge'},
+    {id:8, title:'Fridge gas TOP-UPed', desc:'Refrigerant gas TOP-UP', price:800, category:'Fridge'},
+    {id:2, title:'Fridge gas full charge', desc:'Refrigerant gas full charge', price:1999, category:'Fridge'},
+    {id:3, title:'Fridge door seal Repair', desc:'Door seal Repair (fridge)', price:1600, category:'Fridge'},
+    {id:4, title:'Fridge thermostat replaced', desc:'Thermostat replacement (fridge)', price:450, category:'Fridge'},
+    {id:4, title:'emperature Replace sensor', desc:'Temperature sensor', price:450, category:'Fridge'},
+    
+    {id:12, title:'Repair', desc:'Repair', price:1500, category:'Washing Machine'},
+    {id:1, title:'check-up', desc:'check-up', price:199, category:'Washing Machine'},
+    {id:2, title:'Service', desc:'Service', price:799, category:'Washing Machine'},
+    {id:9, title:'Washing Machine PCB repaired', desc:'Main board repair (washing machine)', price:1500, category:'Washing Machine'},
+    {id:7, title:'Inverter PCB repaired', desc:'Inverter PCB repair & testing(washing machine)', price:4500, category:'Washing Machine'},
+    {id:11, title:'Washing Machine motor replaced', desc:'Motor replacement (washing machine)', price:2500, category:'Washing Machine'},
+    {id:11, title:'Washing Machine suspension replaced', desc:'suspension replacement (washing machine)', price:1199, category:'Washing Machine'},
+    {id:12, title:'Washing Machine drain pump replaced', desc:'Drain pump replacement (washing machine)', price:800, category:'Washing Machine'},
+    {id:13, title:'Washing Machine door lock repaired', desc:'Door lock repair (washing machine)', price:1200, category:'Washing Machine'},
+    {id:14, title:'Washing Machine belt replaced', desc:'Belt replacement (washing machine)', price:600, category:'Washing Machine'},
+    {id:16, title:'Washing Machine timer repaired', desc:'Timer repair (washing machine)', price:1500, category:'Washing Machine'},
+    
+    {id:1, title:'check-up', desc:'check-up', price:199, category:'TV'},
+    {id:12, title:'Repair', desc:'Repair', price:1500, category:'TV'},
+    {id:12, title:'TV LED repaired', desc:'LED panel repair (TV)', price:2000, category:'TV'},
+    {id:13, title:'TV power supply repaired', desc:'Power supply board repair (TV)', price:1200, category:'TV'},   
+    {id:7, title:'LED TV Panel Repair', desc:'Panel & display repair', price:2200, category:'TV'},
+    {id:8, title:'TV Power Supply Repair', desc:'Power board replacement', price:1200, category:'TV'},
+    {id:9, title:'TV HDMI port repair', desc:'HDMI port replacement', price:1800, category:'TV'},
+    
+    {id:1, title:'check-up', desc:'check-up', price:199, category:'TV'},
+    {id:12, title:'Repair', desc:'Repair', price:900, category:'TV'},
+    {id:12, title:'cooler Service', desc:'cooler Service', price:599, category:'TV'},
+    {id:2, title:'Cooler PCB repaired', desc:'Main board repair (cooler)', price:1200, category:'Cooler'},
+    {id:14, title:'Cooler motor replaced', desc:'Motor replacement (cooler)', price:1000, category:'Cooler'},
+    {id:15, title:'Cooler pump replaced', desc:'Water pump replacement (cooler)', price:500, category:'Cooler'},
+
+    {id:16, title:'Microwave PCB repaired', desc:'Main board repair (microwave)', price:1500, category:'Microwave'},
+    {id:17, title:'Microwave magnetron replaced', desc:'Magnetron replacement (microwave)', price:1900, category:'Microwave'},
+    {id:18, title:'Microwave door switch repaired', desc:'Door switch replacement (microwave)', price:800, category:'Microwave'},
+    {id:19, title:'Microwave turntable motor replaced', desc:'Turntable motor replacement (microwave)', price:1200, category:'Microwave'},
+    {id:11, title:'Microwave Transformer Replace', desc:'Transformer Replace', price:1800, category:'Microwave'},
+    {id:12, title:'Repair', desc:'Repair', price:1500, category:'Microwave'},
+
+    {id:19, title:'RO system serviced', desc:'Complete RO system service', price:1200, category:'Water Purifier'},
+    {id:20, title:'RO membrane replaced', desc:'RO membrane replacement', price:950, category:'Water Purifier'},
+    {id:21, title:'UV lamp replaced', desc:'UV lamp replacement (water purifier)', price:600, category:'Water Purifier'},
+    {id:22, title:'Water purifier filter changed', desc:'Filter replacement (water purifier)', price:400, category:'Water Purifier'},
+    {id:1, title:'iffuuuu', desc:'Main board repair (non-inverter)', price:1500, category:'Water Purifier'},
+    {id:2, title:'Inverter PCB repaired', desc:'Inverter PCB repair & testing', price:4500, category:'Water Purifier'},
+    {id:13, title:'RO Membrane Change', desc:'RO membrane replacement', price:950, category:'Water Purifier'},
+    {id:14, title:'UV Lamp Replacement', desc:'UV lamp fitting', price:600, category:'Water Purifier'},
+  ];
+
+  // state
+  const selected = new Map();
+
+  const productsBody = document.getElementById('productsBody');
+  const invoiceBody = document.getElementById('invoiceBody');
+  const subtotalEl = document.getElementById('subtotal');
+  const grandTotalEl = document.getElementById('grandTotal');
+  const searchInput = document.getElementById('searchInput');
+  const clearAllBtn = document.getElementById('clearAll');
+  const resetInvoiceBtn = document.getElementById('resetInvoice');
+  const printBtn = document.getElementById('printInvoice');
+  const avatarInput = document.getElementById('avatarInput');
+  const avatarImg = document.getElementById('avatarImg');
+  const empName = document.getElementById('empName');
+  const empNameTop = document.getElementById('empNameTop');
+  const empRole = document.getElementById('empRole');
+  const customerNameInput = document.getElementById('customerName');
+  const invoiceDateInput = document.getElementById('invoiceDate');
+  const customerNamePrint = document.getElementById('customerNamePrint');
+  const invoiceDatePrint = document.getElementById('invoiceDatePrint');
+
+  // populate products table
+  function renderProducts(filter = '') {
+    productsBody.innerHTML = '';
+    const q = filter.trim().toLowerCase();
+    // Group products by category
+    const grouped = {};
+    for (const p of products) {
+      if (q && !(p.title + ' ' + p.desc).toLowerCase().includes(q)) continue;
+      if (!grouped[p.category]) grouped[p.category] = [];
+      grouped[p.category].push(p);
+    }
+    let anyProduct = false;
+    const categoryIcons = {
+      'AC': '❄️',
+      'Fridge': '🧊',
+      'Washing Machine': '🧺',
+      'TV': '📺',
+      'Cooler': '💨',
+      'Microwave': '🍲',
+      'Water Purifier': '💧'
+    };
+    // Track open/closed state for each category
+    const openCategories = {};
+
+    for (const cat of Object.keys(grouped)) {
+      // Category header row
+      const icon = categoryIcons[cat] || '';
+      const catTr = document.createElement('tr');
+      catTr.innerHTML = `<td colspan="4" style="background:#f1f8ff;font-weight:700;color:#0b74ff;cursor:pointer">
+        <span style="font-size:20px;margin-right:8px">${icon}</span>${cat}
+        <span style="float:right;font-weight:400;font-size:13px" class="toggleCat">[+]</span>
+      </td>`;
+      catTr.classList.add('category-row');
+      productsBody.appendChild(catTr);
+
+      // Products rows (hidden by default)
+      for (const p of grouped[cat]) {
+        const tr = document.createElement('tr');
+        tr.innerHTML = `
+          <td class="checkbox-cell center"><input type="checkbox" data-id="${p.id}" ${selected.has(p.id) ? 'checked' : ''}></td>
+          <td>
+            <div style="font-weight:600">${p.title}</div>
+            <div class="small muted">${p.desc}</div>
+          </td>
+          <td class="small muted">Service</td>
+          <td class="price">${formatMoney(p.price)}</td>
+        `;
+        tr.classList.add('product-row');
+        tr.setAttribute('data-category', cat);
+        tr.style.display = 'none'; // Always hidden by default
+        // click row to toggle
+        tr.addEventListener('click', (e) => {
+          if (e.target.tagName.toLowerCase() === 'input') return;
+          toggleSelect(p.id);
+        });
+        // checkbox change
+        tr.querySelector('input[type="checkbox"]').addEventListener('change', (e) => {
+          e.stopPropagation();
+          const id = Number(e.target.dataset.id);
+          if (e.target.checked) selectProduct(id); else deselectProduct(id);
+        });
+        productsBody.appendChild(tr);
+        anyProduct = true;
+      }
+      // Toggle category expand/collapse
+      catTr.addEventListener('click', () => {
+        const rows = productsBody.querySelectorAll(`tr.product-row[data-category="${cat}"]`);
+        const toggle = catTr.querySelector('.toggleCat');
+        const isOpen = toggle.textContent === '[-]';
+        for (const row of rows) {
+          row.style.display = isOpen ? 'none' : '';
+        }
+        toggle.textContent = isOpen ? '[+]' : '[-]';
+      });
+    }
+    if (!anyProduct) {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `<td colspan="4" class="empty muted">No products found</td>`;
+      productsBody.appendChild(tr);
+    }
+  }
+
+  function formatMoney(n){
+    return '₹' + Number(n).toLocaleString('en-IN',{maximumFractionDigits:0});
+  }
+
+  function toggleSelect(id){
+    if(selected.has(id)) deselectProduct(id); else selectProduct(id);
+    // update checkbox state visually
+    renderProducts(searchInput.value);
+  }
+
+  function selectProduct(id){
+    const p = products.find(x=>x.id===id);
+    if(!p) return;
+    selected.set(id, {product:p, qty:1});
+    renderInvoice();
+    renderProducts(searchInput.value);
+  }
+
+  function deselectProduct(id){
+    selected.delete(id);
+    renderInvoice();
+    renderProducts(searchInput.value);
+  }
+
+  function renderInvoice(){
+    invoiceBody.innerHTML = '';
+    if(selected.size === 0){
+      invoiceBody.innerHTML = '<tr class="empty-row"><td colspan="4" class="empty">No items selected</td></tr>';
+      updateTotals();
+      customerNamePrint.textContent = '';
+      invoiceDatePrint.textContent = '';
+      return;
+    }
+    for(const [id, data] of selected){
+      const {product, qty} = data;
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td><div style="font-weight:600">${product.title}</div><div class="small muted">${product.desc}</div></td>
+        <td class="small">${formatMoney(product.price)}</td>
+        <td class="qty"><input type="number" min="1" value="${qty}" data-id="${id}" style="width:64px"></td>
+        <td style="text-align:right">${formatMoney(product.price * qty)}</td>
+      `;
+      // qty change
+      tr.querySelector('input[type="number"]').addEventListener('change', (e)=>{
+        let v = parseInt(e.target.value) || 1;
+        if(v < 1) v = 1; e.target.value = v;
+        selected.get(id).qty = v;
+        renderInvoice();
+      });
+      // double click to remove
+      tr.addEventListener('dblclick', ()=>{ deselectProduct(id); });
+      invoiceBody.appendChild(tr);
+    }
+    // small remove row at bottom
+    const trRem = document.createElement('tr');
+    trRem.innerHTML = `<td colspan="4" style="padding-top:6px;text-align:right"><button class="remove-btn" id="removeAllBtn">Remove all selected</button></td>`;
+    invoiceBody.appendChild(trRem);
+    document.getElementById('removeAllBtn').addEventListener('click', () => {
+      selected.clear(); renderInvoice(); renderProducts(searchInput.value);
+    });
+    customerNamePrint.textContent = customerNameInput.value ? 'Customer: ' + customerNameInput.value : '';
+    invoiceDatePrint.textContent = invoiceDateInput.value ? 'Date: ' + invoiceDateInput.value : '';
+    updateTotals();
+  }
+
+  customerNameInput.addEventListener('input', function() {
+    customerNamePrint.textContent = this.value ? 'Customer: ' + this.value : '';
+  });
+  invoiceDateInput.addEventListener('input', function() {
+    invoiceDatePrint.textContent = this.value ? 'Date: ' + this.value : '';
+  });
+
+  function updateTotals(){
+    let subtotal = 0;
+    for(const [id, data] of selected){
+      subtotal += data.product.price * data.qty;
+    }
+    subtotalEl.textContent = formatMoney(subtotal);
+    const labourCharge = 399; // fixed price
+    grandTotalEl.textContent = formatMoney(subtotal + labourCharge);
+  }
+
+  // events
+  searchInput.addEventListener('input', ()=> renderProducts(searchInput.value));
+  clearAllBtn.addEventListener('click', ()=> { searchInput.value=''; renderProducts(''); });
+  resetInvoiceBtn.addEventListener('click', ()=> { selected.clear(); customerNameInput.value=''; invoiceDateInput.value=''; renderInvoice(); renderProducts(searchInput.value);});
+  printBtn.addEventListener('click', ()=>{
+    if(!invoiceDateInput.value){
+      invoiceDateInput.value = new Date().toISOString().slice(0,10);
+      invoiceDatePrint.textContent = 'Date: ' + invoiceDateInput.value;
+    }
+    window.print();
+  });
+
+  // avatar upload preview
+  avatarInput.addEventListener('change', (e)=>{
+    const f = e.target.files?.[0];
+    if(!f) return;
+    const url = URL.createObjectURL(f);
+    avatarImg.src = url;
+  });
+
+  // helper to set default employee info (could be replaced from your login system)
+  function setEmployeeInfo(name='Ramesh Kumar', role='Technician'){
+    empName.textContent = name;
+    empNameTop.textContent = name;
+    empRole.textContent = role;
+  }
+
+  // initialize date to today
+  invoiceDateInput.value = new Date().toISOString().slice(0,10);
+
+  // initial render
+  setEmployeeInfo('Employee Name','Technician'); // replace with real logged-in name
+  renderProducts();
+
+  // keyboard: pressing "p" focuses search
+  window.addEventListener('keydown', (e)=>{
+    if(e.key === 'p' && document.activeElement !== searchInput){
+      e.preventDefault(); searchInput.focus();
+    }
+  });  
+</script>
+
+<script type="module">
+  import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+  import { getAuth, onAuthStateChanged, signOut } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+  import { getFirestore, doc, setDoc, getDoc } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-firestore.js";
+  import { getStorage, ref, uploadBytes, getDownloadURL } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-storage.js";
+
+  const firebaseConfig = {
+    apiKey: "AIzaSyDmBgVNnkZUUeXdVqio59fJipvittdJOF4",
+    authDomain: "savera-services.firebaseapp.com",
+    projectId: "savera-services",
+    storageBucket: "savera-services.appspot.com",
+    messagingSenderId: "289331297114",
+    appId: "1:289331297114:web:2fc92c158dc62517e85163"
+  };
+
+  const app = initializeApp(firebaseConfig);
+  const auth = getAuth(app);
+  const db = getFirestore(app);
+  const storage = getStorage(app);
+
+  // On Auth, fetch profile photo from Firestore
+  onAuthStateChanged(auth, async (user) => {
+    if (!user) {
+      window.location.href = "login.html";
+    } else {
+      const nameElem = document.getElementById("empName");
+      if (nameElem) nameElem.textContent = user.displayName || "No Name";
+      // Fetch photoURL from Firestore
+      const profileRef = doc(db, "users", user.uid);
+      const snap = await getDoc(profileRef);
+      if (snap.exists() && snap.data().photoURL) {
+        avatarImg.src = snap.data().photoURL;
+      }
+    }
+  });
+
+  // Logout function
+  window.logout = () => {
+    signOut(auth).then(() => {
+      window.location.href = "login.html";
+    });
+  };
+
+  // Avatar upload & save to Firebase Storage + Firestore
+  avatarInput.addEventListener('change', async (e)=>{
+    const f = e.target.files?.[0];
+    if(!f || !auth.currentUser) return;
+    const storageRef = ref(storage, 'avatars/' + auth.currentUser.uid + '_' + Date.now());
+    await uploadBytes(storageRef, f);
+    const url = await getDownloadURL(storageRef);
+    avatarImg.src = url;
+    // Save photoURL to Firestore
+    const profileRef = doc(db, "users", auth.currentUser.uid);
+    await setDoc(profileRef, { photoURL: url }, { merge: true });
+  });
+</script>
+
+</body>
+</html>

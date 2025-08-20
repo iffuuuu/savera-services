@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Savera Services</title>
+  <link rel="stylesheet" href="style.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <link href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" rel="stylesheet">        
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="Savera Logo" class="logo-img">
+      SaveraServices
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="#home">Home</a></li>
+      <li><a href="#services">Services</a></li>
+      <li><a href="#contact">Contact Us</a></li>
+       
+    </ul>
+  </div>
+</nav>
+
+ 
+  <header>
+    <div class="header-text" data-aos="fade-right">
+      <h1>Welcome to Savera Services</h1>
+      <p>Trusted appliance repair at your doorstep – quick, affordable, professional.
+      </p>
+      <a href="#services" class="hero-btn">Book Now</a>
+    </div>
+    <div class="header-img" data-aos="fade-left">
+      <img src="images/AC/ac-repair.jpg" alt="Repair Illustration">
+    </div>
+  </header>
+
+  <section id="services" class="services">
+    <div class="section-divider"></div> <!-- Line added here -->
+    <h2 data-aos="fade-up">Our Repair Services</h2>
+    <div class="card-container">
+      <div class="service-card" data-aos="fade-up" data-aos-delay="100">
+        <img src="images/AC/Ac noise.jpeg" alt="AC Repair">
+        <h3>AC Repair</h3>
+        <p>Cooling issues, noise, or servicing – we fix all AC problems.</p>
+        <a href="AC.html" class="btn">Book Now</a>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="400">
+        <img src="images/fridge/fridge-repair1.jpg" alt="Fridge Repair">
+        <h3>Fridge Repair</h3>
+        <p>Cooling problems or unusual noises? Let us handle it.</p>
+        <a href="fridge.html" class="btn">Book Now</a>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="200">
+        <img src="images/washing machine/main image.jpg" alt="Washing Machine Repair">
+        <h3>Washing Machine Repair</h3>
+        <p>From drum issues to drainage problems, we’ve got it covered.</p>
+        <a href="wm.html" class="btn">Book Now</a>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="300">
+        <img src="images/TV/istockphoto-1389783400-612x612.jpg" alt="TV Repair">
+        <h3>TV Repair</h3>
+        <p>Screen issues or power failure? Our experts can help.</p>
+        <a href="TV.html" class="btn">Book Now</a>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="500">
+        <img src="images/microvev/microvawe.jpg" alt="Microwave Repair">
+        <h3>Microwave Repair</h3>
+        <p>Quick repairs for heating or display issues.</p>
+        <a href="microwave.html" class="btn">Book Now</a>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+        <img src="images/water filter/water-purifier-repair-service.jpg" alt="Water Filter Repair">
+        <h3>Water purifier</h3>
+        <p>Water not clean? Filters clogged? We repair it fast.</p>
+        <a href="Water.html" class="btn">Book Now</a>
+      </div>
+
+      <div class="service-card" data-aos="fade-up" data-aos-delay="700">
+        <img src="images/cooler/cooler.jpg" alt="Cooler Repair">
+        <h3>Cooler Repair</h3>
+        <p>Full Cooler Services & Repair</p>
+        <a href="cooler.html" class="btn">Book Now</a>
+      </div>
+      
+      <div class="service-card" data-aos="fade-up" data-aos-delay="600">
+        <img src="images/genretor/diesel-generator-repair-services-484.jpg" alt="Generator Repair">
+        <h3>Generator Repair</h3>
+        <p>Fuel problems, noise, or startup issues? We fix it all.</p>
+        <a href="genrator.html" class="btn">Book Now</a>
+      </div>
+
+    </div>
+  </section>
+
+  <section class="stats" data-aos="fade-up">
+    <div class="stat-box">
+      <i class="fas fa-users"></i>
+      <h3>500+ Employees</h3>
+    </div>
+    <div class="stat-box">
+      <i class="fas fa-user-check"></i>
+      <h3>9000+ Trusted Customers</h3>
+    </div>
+  </section>
+
+  <footer id="contact" data-aos="fade-up">
+    <h2>Contact Us</h2>
+    <p>Email: info@saveraservices.com</p>
+    <p>Phone: +91 7020991141</p>
+    <p>Address: camp, pune, Maharashtra</p>
+    <a href="employes/logain.html" class="logain-btn">logain</a>
+  </footer>
+
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <script>
+    AOS.init({
+      duration: 500,
+      once: true
+    });
+    const toggle = document.getElementById('menu-toggle');
+  const links = document.getElementById('nav-links');
+
+  toggle.addEventListener('click', () => {
+    links.classList.toggle('active');
+  });
+
+  
+  </script>
+
+</body>
+</html>

@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Employee Login - SaveraServices</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="employe.css">
+</head>
+<body>
+  <div class="container">
+    <h2 id="form-title">Employee Login</h2>
+    <input type="email" id="email" placeholder="Email" />
+    <input type="password" id="password" placeholder="Password" />
+    <button onclick="login()">Login</button>
+    <p class="msg" id="message"></p>
+  </div>
+
+  <script type="module">
+    import { initializeApp } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-app.js";
+    import {
+      getAuth,
+      signInWithEmailAndPassword
+    } from "https://www.gstatic.com/firebasejs/10.5.2/firebase-auth.js";
+
+    const firebaseConfig = {
+      apiKey: "AIzaSyDmBgVNnkZUUeXdVqio59fJipvittdJOF4",
+      authDomain: "savera-services.firebaseapp.com",
+      projectId: "savera-services",
+      storageBucket: "savera-services.appspot.com",
+      messagingSenderId: "289331297114",
+      appId: "1:289331297114:web:2fc92c158dc62517e85163"
+    };
+
+    const app = initializeApp(firebaseConfig);
+    const auth = getAuth(app);
+
+    window.login = () => {
+      const email = document.getElementById("email").value.trim();
+      const password = document.getElementById("password").value.trim();
+      const message = document.getElementById("message");
+
+      message.innerText = "";
+
+      if (!email || !password) {
+        message.innerText = "Please fill all fields!";
+        message.className = "msg error";
+        return;
+      }
+
+      signInWithEmailAndPassword(auth, email, password)
+        .then(() => {
+          window.location.href = "dashboard.html";
+        })
+        .catch((error) => {
+          message.innerText = error.message;
+          message.className = "msg error";
+        });
+    };
+  </script>
+</body>
+</html>

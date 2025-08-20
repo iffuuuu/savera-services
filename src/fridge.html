@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Fridge Repair</title>
+  <link rel="stylesheet" href="wm.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="Savera Logo" class="logo-img">
+      <span>SaveraServices</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="index.html#service"><i class="fas fa-cogs"></i> Services</a></li>
+      <li><a href="index.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="services" class="services">
+    <h2>Refrigerator repair</h2>
+    <div class="service-box">
+        <p class="box-title">Select a service</p>
+        <div class="service-row" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
+            <div class="service-card" style="flex: 0 1 120px; text-align: center;">
+                <a href="#Repair" class="a-tag">
+                    <img src="images/fridge/fridge-repair1.jpg" alt="Repair" style="width: 70px; height: 70px; object-fit: cover;">
+                    <p>Repair</p>
+                </a>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="Repair">
+  <div class="section-divider"></div>
+  <h2>Repair</h2>
+  <div class="service-list">
+    <div class="service-item">
+      <span class="price"><del>₹499</del> ₹199</span>
+      <img src="images/fridge/fridge-repair1.jpg" alt="Refrigerator repair service">
+      <h3>Refrigerator Repair</h3>
+      <p>We check your refrigerator and give you a quote for repair.</p>
+      <button class="btn" onclick="openModal('Refrigerator repair', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹999</del> ₹599</span>
+      <img src="images/fridge/just image.jpg" alt="Water leaking from refrigerator">
+      <h3>Refrigerator Water Leakage</h3>
+        <p>We check your refrigerator water leakage and give you a quote for repair.</p>
+      <button class="btn" onclick="openModal('Refrigerator water Leakage', '₹599')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    </div>
+</section>
+
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalServiceName" style="color: #ffffff; font-size: 1.2rem; font-weight: 700; text-align:center;">Service Name</h2>
+    <p class="modal-price" id="modalServicePrice" style="color: #000000; font-size: 1.2rem; text-align:center; font-weight:600;">Price</p>
+    <form id="bookingForm">
+      <input name="name" type="text" placeholder="Your Name" required />
+      <input name="mobile" type="tel" placeholder="Mobile Number" required />
+      <input name="address" type="text" placeholder="Address" required />
+      <input id="serviceInput" name="service" type="hidden" />
+      <input id="priceInput" name="price" type="hidden" />
+      <button type="submit"><i class="fas fa-check-circle"></i> Confirm Booking</button>
+      <div class="form-note" style="color:#fffefe; text-align:center; margin-top:12px;">
+        <strong style="text-size-adjust: 25px;">Note:</strong><br>
+        <p>this price is only cheak up price, we will say you to confirm price after inspection.</p>
+      </div>
+      <div class="process-steps">
+        <h3>Our Process</h3>
+        <div class="step">
+          <div class="circle">1</div>
+          <div class="text">
+            <strong>Inspection & quote</strong>
+            <p>We inspect the appliance & share a repair quote for approval</p>
+          </div>
+        </div>
+        <div class="step">             
+          <div class="circle">2</div>
+          <div class="text">
+            <strong>Approval or expert review</strong>
+            <p>Repair begins after your approval, if you are unsure you can call our expert.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">3</div>
+          <div class="text">
+            <strong>Repair & spare parts</strong>
+            <p>If needed, we will source spare parts at fixed rates for the repair</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">4</div>
+          <div class="text">
+            <strong>Warranty activation</strong>
+            <p>Our Company gives you 30 Days Warranty</p>
+          </div>
+        </div>
+      </div>
+        <div class="form-note" style="color:#fffefe; text-align:center; margin-top:12px;">
+        <strong style="text-size-adjust: 25px;">Note:</strong>
+        <br><p> Our technician will call you within 30 minutes to confirm your booking details.</p>
+        <p>this price is only cheak up price, we will say you to confirm price after inspection.</p>
+        <p>Our Company gives you 30 Days Warranty</p>
+      </div>
+    </form>
+    <p class="success-message" id="successMessage">Thank you! Your booking is confirmed.</p>
+  </div>
+</div>
+
+<!-- Success Tick Modal -->
+<div id="successTickModal" class="modal">
+  <div class="modal-content tick-modal">
+    <div class="big-tick">✔️</div>
+    <p class="success-text">Booking Confirmed!</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("nav-links").classList.toggle("active");
+  });
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwEfZiakd4otU2Aocj8o_fczm68SnwC4PavYYPJ9jSYDD3BU9kPnkK_pKgBOQNz8MaEyQ/exec';
+
+  function openModal(service, price) {
+    document.getElementById("bookingModal").style.display = "flex";
+    document.getElementById("modalServiceName").innerText = service;
+    document.getElementById("modalServicePrice").innerText = price;
+    document.getElementById("serviceInput").value = service;
+    document.getElementById("priceInput").value = price;
+    document.getElementById("successMessage").style.display = "none";
+  }
+
+  function closeModal() {
+    document.getElementById("bookingModal").style.display = "none";
+  }
+
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = new FormData(this);
+    fetch(scriptURL, { method: 'POST', body: form })
+      .then(() => {
+        document.getElementById("successMessage").style.display = "none";
+        document.getElementById("bookingModal").style.display = "none";
+        // Show success tick modal
+        const tickModal = document.getElementById("successTickModal");
+        tickModal.style.display = "flex";
+        // Hide after 2.5 seconds
+        setTimeout(() => {
+          tickModal.style.display = "none";
+        }, 2500);
+        this.reset();
+      })
+      .catch(() => alert("Error! Try again."));
+  });
+
+  window.onclick = function(event) {
+    if (event.target === document.getElementById("bookingModal")) {
+      closeModal();
+    }
+  };
+</script>
+</body>
+</html>

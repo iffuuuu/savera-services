@@ -1,0 +1,283 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AC Repair Booking – SaveraServices</title>
+  <link rel="stylesheet" href="AC.css" />
+  <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
+</head>
+<body>
+
+<nav class="navbar">
+  <div class="nav-container">
+    <div class="logo">
+      <img src="images/logo.png" alt="Savera Logo" class="logo-img">
+      <span>SaveraServices</span>
+    </div>
+    <div class="menu-toggle" id="menu-toggle">
+      <i class="fas fa-bars"></i>
+    </div>
+    <ul class="nav-links" id="nav-links">
+      <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+      <li><a href="index.html#service"><i class="fas fa-cogs"></i> Services</a></li>
+      <li><a href="index.html"><i class="fas fa-phone"></i> Contact Us</a></li>
+    </ul>
+  </div>
+</nav>
+
+<section id="services" class="services">
+  <h2>AC Services</h2>
+  <div class="service-box">
+    <p class="box-title">Select a service</p>
+    <div class="service-row">
+      <div class="service-card">
+        <a href="#Servicing" class="a-tag">
+          <img src="images/AC/foam servicing.jpg" alt="Servicing">
+          <p>Servicing</p>
+        </a>
+      </div>
+      <div class="service-card">
+        <a href="#Repair" class="a-tag">
+          <img src="images/AC/ac repair.jfif" alt="Repair">
+          <p>Repair</p>
+        </a>
+      </div>
+      <div class="service-card">
+        <a href="#Gas Refill" class="a-tag">
+          <img src="images/AC/ful gas charjing.jpg" alt="Gas Refill">
+          <p>Gas Refill</p>
+        </a>
+      </div>
+      <div class="service-card">
+        <a href="#Installation" class="a-tag">
+          <img src="images/AC/ac installation.jpg" alt="Installation">
+          <p>Installa</p>
+        </a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="Servicing">
+  <div class="section-divider"></div>
+  <h2>Servicing</h2>
+  <div class="service-list">
+    <div class="service-item">
+      <span class="price"><del>₹1099</del> ₹599</span>
+      <img src="images/AC/foam servicing.jpg" alt="Foam Jet Servicing">
+      <h3>Foam Jet Service</h3>
+      <p>High-pressure jet & Foam cleaning for indoor & outdoor unit.</p>
+      <button class="btn" onclick="openModal('Foam Jet Service', '₹599')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹999</del> ₹499</span>
+      <img src="images/AC/jet servicing.jpg" alt="Deep Jet Service">
+      <h3>Deep Jet Service</h3>
+      <p>High-pressure jet cleaning for indoor & outdoor unit.</p>
+      <button class="btn" onclick="openModal('Deep Jet Service', '₹499')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹1199</del> ₹799</span>
+      <img src="images/AC/changing-air-filter.jpg" alt="Hand Servicing">
+      <h3>Hand Service</h3>
+      <p>Manual cleaning of filters and coils for better airflow.</p>
+      <button class="btn" onclick="openModal('Hand Servicing','₹799')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹4999</del> ₹2499</span>
+      <img src="images/AC/ac-repair.jpg" alt="Regular Maintenance">
+      <h3>Regular Maintenance</h3>
+      <p>Basic inspection & servicing for smooth performance.</p>
+      <button class="btn" onclick="openModal('Regular Maintenance', '₹2499')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="Repair">
+  <h2>Repair</h2>
+  <div class="service-list">
+    <div class="service-item">
+      <span class="price"><del>₹599</del> ₹199</span>
+      <img src="images/AC/AC others.jpg" alt="A/C Not Cooling">
+      <h3>A/C Not Cooling</h3>
+      <p>Complete diagnosis for cooling loss (gas/components).</p>
+      <button class="btn" onclick="openModal('A/C Not Cooling', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹899</del> ₹499</span>
+      <img src="images/AC/AC water leakage.jpg" alt="Water Leakage Fix">
+      <h3>Water Leakage Fix</h3>
+      <p>Leak detection & drain pipe blockage removal.</p>
+      <button class="btn" onclick="openModal('Water Leakage Fix', '₹499')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹899</del> ₹499</span>
+      <img src="images/AC/Ac noise.jpeg" alt="AC Noise">
+      <h3>AC Noise</h3>
+      <p>Fixing unwanted AC buzzing or rattling sounds.</p>
+      <button class="btn" onclick="openModal('AC Noise', '₹499')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹599</del> ₹199</span>
+      <img src="images/AC/ac repair.jfif" alt="AC Repair">
+      <h3>AC Repair & check-up</h3>
+      <p>Complete repair for all AC issues and failures.</p>
+      <button class="btn" onclick="openModal('AC Repair', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="Gas Refill">
+  <h2>Gas Refill</h2>
+  <div class="service-list">
+    <div class="service-item">
+      <span class="price"><del>₹2499</del> ₹1299</span>
+      <img src="images/AC/gas filling.jpg" alt="Gas Top Up">
+      <h3>Gas Top Up</h3>
+      <p>Refrigerant top-up for better cooling & life.</p>
+      <button class="btn" onclick="openModal('Gas Top Up', '₹1299')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹3199</del> ₹2199</span>
+      <img src="images/AC/ful gas charjing.jpg" alt="Full Gas Charging">
+      <h3>Full Gas Charging</h3>
+      <p>Complete gas refill for efficient cooling.</p>
+      <button class="btn" onclick="openModal('Full Gas Charging', '₹2199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+  </div>
+</section>
+
+<section id="Installation">
+  <h2>Installation/Uninstallation</h2>
+  <div class="service-list">
+    <div class="service-item">
+      <span class="price"><del>₹2099</del> ₹1299</span>
+      <img src="images/AC/ac installation.jpg" alt="AC Installation">
+      <h3>AC Installation</h3>
+      <p>Split/Window AC installation with full fitting.</p>
+      <button class="btn" onclick="openModal('AC Installation', '₹1299')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+    <div class="service-item">
+      <span class="price"><del>₹1099</del> ₹599</span>
+      <img src="images/AC/ac unistallation.jpg" alt="AC Uninstallation">
+      <h3>AC Uninstallation</h3>
+      <p>Safe AC dismantling & removal by professionals.</p>
+      <button class="btn" onclick="openModal('AC Uninstallation', '₹599')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    </div>
+  </div>
+</section>
+
+<div id="bookingModal" class="modal">
+  <div class="modal-content">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <h2 id="modalServiceName" style="color: #ffffff; font-size: 1.5rem; font-weight: 700; text-align:center;">Service Name</h2>
+    <p class="modal-price" id="modalServicePrice" style="color: #222; font-size: 1.2rem; text-align:center; font-weight:600;">Price</p>
+    <form id="bookingForm">
+      <input name="name" type="text" placeholder="Your Name" required />
+      <input name="mobile" type="tel" placeholder="Mobile Number" required />
+      <input name="address" type="text" placeholder="Address" required />
+      <input id="serviceInput" name="service" type="hidden" />
+      <input id="priceInput" name="price" type="hidden" />
+      <button type="submit"><i class="fas fa-check-circle"></i> Confirm Booking</button>
+       <div class="form-note" style="color:#fffefe; text-align:center; margin-top:12px;">
+        <strong style="text-size-adjust: 25px;">Note:</strong><br>
+        <p>this price is only cheak up price, we will say you to confirm price after inspection.</p>
+      </div>
+      <div class="process-steps">
+        <h3>Our Process</h3>
+        <div class="step">
+          <div class="circle">1</div>
+          <div class="text">
+            <strong>Pre-service checks</strong>
+            <p>Complete AC check-up, including cooling gas level check.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">2</div>
+          <div class="text">
+            <strong>Approval or expert review</strong>
+            <p>Repair begins after your approval, if you are unsure you can call our expert.</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">3</div>
+          <div class="text">
+            <strong>Repair & spare parts</strong>
+            <p>If needed, we will source spare parts at fixed rates for the repair</p>
+          </div>
+        </div>
+        <div class="step">
+          <div class="circle">4</div>
+          <div class="text">
+            <strong>Testing & Handover</strong>
+            <p>Post-service testing and customer confirmation.</p>
+          </div>
+        </div>
+      </div>
+              <div class="form-note" style="color:#fffefe; text-align:center; margin-top:12px;">
+        <strong style="text-size-adjust: 25px;">Note:</strong>
+        <br><p> Our technician will call you within 30 minutes to confirm your booking details.</p>
+        <p>this price is only cheak up price, we will say you to confirm price after inspection.</p>
+        <p>Our Company gives you 30 Days Warranty</p>
+      </div>
+    </form>
+    <p class="success-message" id="successMessage">Thank you! Your booking is confirmed.</p>
+  </div>
+</div>
+
+<div id="successTickModal" class="modal">
+  <div class="modal-content tick-modal">
+    <div class="big-tick">✔️</div>
+    <p class="success-text">Booking Confirmed!</p>
+  </div>
+</div>
+
+<script>
+  document.getElementById("menu-toggle").addEventListener("click", function () {
+    document.getElementById("nav-links").classList.toggle("active");
+  });
+
+  const scriptURL = 'https://script.google.com/macros/s/AKfycbwEfZiakd4otU2Aocj8o_fczm68SnwC4PavYYPJ9jSYDD3BU9kPnkK_pKgBOQNz8MaEyQ/exec';
+
+  function openModal(service, price) {
+    document.getElementById("bookingModal").style.display = "flex";
+    document.getElementById("modalServiceName").innerText = service;
+    document.getElementById("modalServicePrice").innerText = price;
+    document.getElementById("serviceInput").value = service;
+    document.getElementById("priceInput").value = price;
+    document.getElementById("successMessage").style.display = "none";
+  }
+
+  function closeModal() {
+    document.getElementById("bookingModal").style.display = "none";
+  }
+
+  document.getElementById("bookingForm").addEventListener("submit", function(e) {
+    e.preventDefault();
+    const form = new FormData(this);
+    fetch(scriptURL, { method: 'POST', body: form })
+      .then(() => {
+        document.getElementById("successMessage").style.display = "none";
+        document.getElementById("bookingModal").style.display = "none";
+        // Show success tick modal
+        const tickModal = document.getElementById("successTickModal");
+        tickModal.style.display = "flex";
+        // Hide after 2.5 seconds
+        setTimeout(() => {
+          tickModal.style.display = "none";
+        }, 2500);
+        this.reset();
+      })
+      .catch(() => alert("Error! Try again."));
+  });
+
+  window.onclick = function(event) {
+    if (event.target === document.getElementById("bookingModal")) {
+      closeModal();
+    }
+  };
+</script>
+</body>
+</html>
