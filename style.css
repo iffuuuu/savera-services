@@ -78,8 +78,7 @@ html {
   border-radius: 30px;
   color: #ffffff;
   border-color: #000000;
-}averaservices.com</p>
-      <p>Phone: +91 70
+}
 
 .menu-toggle {
   display: none;
@@ -139,7 +138,7 @@ header {
 
 .hero-btn-group {
   display: flex;
-  float:left
+  float:left;
   align-items: center;
   flex-wrap: wrap;
   gap: 12px;
