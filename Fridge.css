@@ -925,3 +925,303 @@ section {
   font-weight: bold;
   color: #0077cc;
 }
+
+
+.offer-wrapper {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.offer-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.offer-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.offer-card img {
+  width: 42px;
+  height: 42px;
+}
+
+.offer-card h4 {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.offer-card p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+
+.call-bttn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7bdbb6, #4da8da);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.service-info.white {
+  max-width: 700px;
+  margin: auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  color: #222;
+}
+
+.service-info.white h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.service-info.white h4 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.service-info.white p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.service-info.white .price {
+  background: #f5f7fa;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.service-info.white ul {
+  padding-left: 18px;
+  margin-bottom: 14px;
+}
+
+.service-info.white ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.service-info.white .note {
+  font-size: 13px;
+  color: #666;
+  border-left: 3px solid #4da8da;
+  padding-left: 10px;
+}
+.two-box-layout {
+  display: flex;
+  gap: 12px;   /* yahin se control hota hai */
+  align-items: stretch;
+}
+
+/* desktop look same rahe */
+.two-box-layout > div {
+  flex: 1;
+}
+.two-box-layout {
+  position: relative;     /* 🔥 absolute hata diya */
+  margin-top: 80px;       /* upar se safe distance */
+  z-index: 1;
+}
+
+
+.two-box-layout > div {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+
+  /* start hidden */
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition: all 0.6s ease;
+}
+
+/* jab visible ho */
+.two-box-layout > div.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* hover effect – same kal wali feel */
+.two-box-layout > div:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(237, 0, 0, 0.25);
+}
+
+
+/* mobile pe upar-niche */
+@media (max-width: 768px) {
+  .two-box-layout {
+    flex-direction: column;
+  }
+}
+
+/* ===============================
+   ICON SERVICES – SEXY VERSION
+================================ */
+
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px; /* thoda tight, premium look */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card base */
+.service-icon {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 10px;
+  text-decoration: none;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 
+    transform 0.45s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow layer */
+.service-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top,
+      rgba(0,106,255,0.18),
+      transparent 70%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+/* Icon image */
+.service-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition:
+    transform 0.5s cubic-bezier(.4,0,.2,1),
+    filter 0.5s ease;
+}
+
+/* Text */
+.service-icon span {
+  font-size: 14px;
+  margin-top: auto;
+  line-height: 1.1;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* ===============================
+   HOVER – REAL SEXY PART
+================================ */
+
+.service-icon:hover {
+  transform: translateY(-8px);
+  background: #f4f8ff;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+.service-icon:hover::before {
+  opacity: 1;
+}
+
+.service-icon:hover img {
+  transform: scale(1.18) rotate(-6deg);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+}
+
+.service-icon:hover span {
+  transform: translateY(-2px);
+  color: #006aff;
+}
+
+
+.service-icon img {
+  animation: floatIcon 3.8s ease-in-out infinite;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .icon-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .service-icon {
+    height: 130px;
+  }
+
+  .service-icon span {
+    font-size: 13px;
+  }
+}
+/* ===============================
+   ICON ENTRY ANIMATION (MOBILE)
+================================ */
+
+.service-icon {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* jab visible ho */
+.service-icon.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* thoda delay look ke liye */
+.service-icon:nth-child(1) { transition-delay: 0.05s; }
+.service-icon:nth-child(2) { transition-delay: 0.1s; }
+.service-icon:nth-child(3) { transition-delay: 0.15s; }
+.service-icon:nth-child(4) { transition-delay: 0.2s; }
+.service-icon:nth-child(5) { transition-delay: 0.25s; }
+.service-icon:nth-child(6) { transition-delay: 0.3s; }
+.service-icon:nth-child(7) { transition-delay: 0.35s; }
+.service-icon:nth-child(8) { transition-delay: 0.4s; }
+.service-icon:nth-child(9) { transition-delay: 0.45s; }
+
+
