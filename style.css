@@ -113,9 +113,9 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 50px 10%;
+  padding: 0; /* default to 0 so mobile doesn't get inset during initial render */
   flex-wrap: wrap;
-  background: #fff;
+  background: transparent;
 }
 
 .header-text {
@@ -569,3 +569,14 @@ footer p {
   /* ensure no horizontal scroll from the bleed */
   body { overflow-x: hidden; }
 }
+
+/* Desktop header padding/background maintained for larger screens */
+@media (min-width: 769px) {
+  header {
+    padding: 50px 10%;
+    background: #fff;
+  }
+}
+
+/* prevent any horizontal scroll/gap globally */
+html, body { overflow-x: hidden; }
