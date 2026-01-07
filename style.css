@@ -203,6 +203,7 @@ header {
 .header-img {
   flex: 1;
   text-align: center;
+    padding: 0;
 }
 
 .header-img img {
@@ -484,4 +485,87 @@ footer p {
   .service-icon span {
     font-size: 13px;
   }
+}
+
+/* Mobile carousel styles */
+.mobile-carousel {
+  display: none;
+  width: 100%;
+  max-width: 520px;
+  margin: 0 auto;
+  position: relative;
+}
+.carousel-track {
+  position: relative;
+  overflow: hidden;
+  height: 220px;
+  border-radius: 12px;
+}
+.carousel-item {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease;
+}
+.carousel-item img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  display: block;
+  border-radius: 12px;
+}
+.carousel-item.active {
+  opacity: 1;
+  position: relative;
+}
+.carousel-btn {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(0,0,0,0.45);
+  border: none;
+  color: #fff;
+  padding: 8px 10px;
+  border-radius: 50%;
+  cursor: pointer;
+  z-index: 10;
+}
+.carousel-btn.prev { left: 10px; }
+.carousel-btn.next { right: 10px; }
+
+@media (max-width: 768px) {
+  .mobile-carousel { display: block; }
+  .header-grid { display: none; }
+}
+
+/* Make mobile carousel full-bleed and sit at very top on small screens */
+@media (max-width: 768px) {
+  header {
+    padding: 0; /* let carousel touch edges */
+  }
+
+  .header-img {
+    width: 100%;
+    order: -1; /* move above header text when stacked */
+  }
+
+    .mobile-carousel {
+      position: relative;
+      left: 50%;
+      transform: translateX(-50%);
+    width: 100vw;
+    max-width: none;
+    border-radius: 0;
+    height: 220px;
+    overflow: hidden;
+  }
+
+  .ca rousel-track, .carousel-item { height: 100%; }
+  .carousel-item img { border-radius: 0; }
+
+  /* ensure no horizontal scroll from the bleed */
+  body { overflow-x: hidden; }
 }
