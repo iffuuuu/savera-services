@@ -27,160 +27,595 @@
   </div>
 </nav>
 
-<section id="services" class="services">
-  <h2>AC Services</h2>
-  <div class="service-box">
-    <p class="box-title">Select a service</p>
+<!-- Responsive hero: image on top for phones, number left and image right on desktop -->
+<div class="hero-contact">
+  <div class="contact-image">
+    <img src="images/fridge/fridge-repair1.jpg" alt="Fridge Repair Pune" />
+  </div>
+  <div class="hero-content">
+    <h1>Reliable Fridge Repair Services in Pune – Expert Technicians</h1>
+    <p>
+      Need reliable fridge repair services in Pune? SaveraServices offers fast, affordable, and professional
+      refrigerator repair services near you, for all models and brands. Book your repair now!
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+917020991141" class="call-btn"><i class="fas fa-phone"></i> +91 7020991141</a>
+      <a href="https://wa.me/917020991141" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+    </div>
+  </div>
+</div>
+
+         <section class="services">
+      <div class="section-divider"></div>
+      <h2 data-aos="fade-up">Our Repair Services</h2>
+  <div class="icon-container">
+  <a href="#Repair" class="service-icon" data-aos="fade-up">
+    <img src="images/fridge/Fridge repair services near me.png" alt="fridge Repair in Pune" class="custom-icon">
+    <span>Repair</span>
+  </a>
+
+  <a href="#CoolingIssue" class="service-icon" data-aos="fade-up">
+    <img src="images/fridge/leakage.jpg" alt="Fridge Repair near me" class="custom-icon" style="height: 70px;">
+    <span>Cooling Issue</span>
+  </a>
+
+  <a href="#Servicing" class="service-icon" data-aos="fade-up">
+    <img src="images/fridge/servicing.png" alt="fridge repair near me in pune" class="custom-icon" >
+    <span>Servicing</span>
+  </a>
+
+  <a href="#Door Issue" class="service-icon" data-aos="fade-up">
+    <img src="images/fridge/Door Issue fridge repair in pune .png" alt="Fridge-Repair-Pune " class="custom-icon">
+    <span>Door Issue</span>
+  </a>
+
+  <a href="#light Issue" class="service-icon" data-aos="fade-up">
+    <img src="images/fridge/Light Issue fridge repair near me home service.png" alt="fridge service near me" class="custom-icon">
+    <span>Light Issue</span>
+  </a>    
+
+  <a href="#Servicingp" class="service-icon" data-aos="fade-up">
+    <img src="images/fridge/AMC Servicing fridge repair near me.png" alt="fridge repair service near me" class="custom-icon">
+    <span>Servicing cleaning</span>
+  </a>
+</div>
+</section>
+
+    <section class="service-page">
+
+  <!-- LEFT : SERVICES LIST -->
+  <div class="services-list">
+
+    <h1>Repair</h1>
+    <p class="desc">
+Looking for refrigerator repair service near me in Pune? We fix all fridge problems including 
+leaking, over-freezing, defrost issues, and unusual noise with fast doorstep service. 
+Book trusted fridge repair experts in Pune and say goodbye to refrigerator problems today.
+    </p>
+
+    <!-- Service Item -->
     <div class="service-row">
-      <div class="service-card">
-        <a href="#Servicing" class="a-tag">
-          <img src="images/AC/foam servicing.jpg" alt=" Ac Servicing camp">
-          <p>Servicing</p>
-        </a>
+      <img src="images/fridge/sigel door fridge repair near me.jpg" alt="fridge repair camp pune">
+      <div class="service-info">
+        <h3>Single Door</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
       </div>
-      <div class="service-card">
-        <a href="#Repair" class="a-tag">
-          <img src="images/AC/ac repair.jfif" alt=" AC Repair koregaon">
-          <p>Repair</p>
-        </a>
+         <button class="add-btn" onclick="openModal('Single Door', '₹249')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/Fridge repair services near me.png" alt="fridge repair koregaon park pune">
+      <div class="service-info">
+        <h3>Double Door</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
       </div>
-      <div class="service-card">
-        <a href="#Gas Refill" class="a-tag">
-          <img src="images/AC/ful gas charjing.jpg" alt="AC Gas Refill pimpri">
-          <p>Gas Refill</p>
-        </a>
+         <button class="add-btn" onclick="openModal('Double Door', '₹249')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/tripel door fridge repair services in pune.png" alt="fridge repair hadapsar pune">
+      <div class="service-info">
+        <h3>Triple Door</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
       </div>
-      <div class="service-card">
-        <a href="#Installation" class="a-tag">
-          <img src="images/AC/ac installation.jpg" alt="Ac Installation Pune">
-          <p>Installa</p>
-        </a>
+         <button class="add-btn" onclick="openModal('Triple Door', '₹249')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/side by side  fridge repair in pune .png" alt="fridge repair kharadi pune">
+      <div class="service-info">
+        <h3>Side by Side</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Side by Side', '₹249')">Add to Cart</button>
+      </div>
+
+          <div class="service-row no-line">
+      <img src="images/fridge/AMC Servicing fridge repair near me.png" alt="fridge repair viman nagar pune">
+      <div class="service-info">
+        <h3>other</h3>
+        <div class="price"  id="CoolingIssue">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('other', '₹599')">Add to Cart</button>
+    </div> 
+          <div class="Divider"></div>
+    <h1>Cooling Issue</h1>
+    <p class="desc">
+Clogged condenser coils can cause poor cooling in your fridge. For fast refrigerator 
+repair near me in Pune, our experts clean coils, check the condenser fan, and restore proper cooling.
+    </p>
+
+    <!-- Service Item -->
+    <div class="service-row"> 
+      <img src="images/fridge/Fridge repair services near me.png" alt="Fridge repair Yerwada pune">
+      <div class="service-info">
+        <h3>Single Door. Double Door. Triple Door.</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Single Door. Double Door. Triple Door', '₹249')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/side by side  fridge repair in pune .png" alt="Fridge repair lohegaon pune">
+      <div class="service-info">
+        <h3>Side by Side</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Side by Side', '₹249')">Add to Cart</button>
+      </div>
+
+          <div class="service-row no-line">
+      <img src="images/fridge/Installation fridge repair near me.png" alt="Fridge repair sus pune">
+      <div class="service-info">
+        <h3>other</h3>
+        <div class="price" id="Servicing">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('other', '₹249')">Add to Cart</button>
+    </div> 
+      <div class="Divider"></div>
+
+     <h1>Servicing</h1>
+    <p class="desc">
+Savera Services offers reliable refrigerator repair and cleaning service near me at affordable prices.
+ Our skilled technicians ensure hassle-free fridge cleaning and repair for safe, hygienic, and long-lasting performance.
+    </p>
+    <div class="service-row no-line">
+      <img src="images/fridge/side by side  fridge repair in pune .png" alt="refrigerator servicing pune">
+      <div class="service-info">
+        <h3>All Fridge Servicing</h3>
+        <div class="price" id="Door Issue">
+          ₹599 <span>₹799</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('All Fridge Servicing', '₹599')">Add to Cart</button>
+    </div>
+
+          <div class="Divider"></div>
+     <h1>Door Issue</h1>
+    <p class="desc">
+ Your refrigerator is one of the most essential home appliances, as proper food preservation is a daily necessity.
+ If your fridge door is not closing properly and you’re searching for refrigerator repair near me, Savera Services
+ provides fast and reliable repair solutions for long-lasting performance.
+    </p>
+
+    <!-- Service Item -->
+    <div class="service-row">
+      <img src="images/fridge/AMC Servicing fridge repair near me.png" alt="refrigerator door repair pune">
+      <div class="service-info">
+        <h3>Single Door. Double Door. Triple Door.</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Single Door. Double Door. Triple Door.', '₹249')">Add to Cart</button>
+    </div>  
+
+    <div class="service-row">
+      <img src="images/fridge/leakage.jpg" alt="refrigerator door gasket replacement pune">
+      <div class="service-info">
+        <h3>Side by Side</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Side by Side', '₹249')">Add to Cart</button>
+      </div>
+
+          <div class="service-row no-line">
+      <img src="images/fridge/Installation fridge repair near me.png" alt="refrigerator repair near me pune">
+      <div class="service-info">
+        <h3>other</h3>
+        <div class="price" id="light Issue">
+          ₹249 <span>₹399</span> 
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('other', '₹249')">Add to Cart</button>
+    </div> 
+              <div class="Divider"></div>
+     <h1>light Issue</h1>
+    <p class="desc">
+If your refrigerator light is not working, the bulb may be burned out or have a broken filament. For quick refrigerator repair near me, 
+Savera Services replaces appliance bulbs safely and restores proper lighting.
+    </p>
+
+    <!-- Service Item -->
+    <div class="service-row">
+      <img src="images/fridge/No Power fridge repair home service.png" alt="refrigerator light repair pune">
+      <div class="service-info">
+        <h3>Single Door. Double Door. Triple Door.</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Single Door. Double Door. Triple Door.', '₹249')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/side by side  fridge repair in pune .png" alt="refrigerator repair near me home service pune">
+      <div class="service-info">
+        <h3>Side by Side</h3>
+        <div class="price">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Side by Side', '₹249')">Add to Cart</button>
+      </div>
+
+          <div class="service-row no-line">
+      <img src="images/fridge/AMC Servicing fridge repair near me.png" alt="refrigerator light issue repair pune">
+      <div class="service-info">
+        <h3>other</h3>
+        <div class="price" id="Servicingp">
+          ₹249 <span>₹399</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('other', '₹249')">Add to Cart</button>
+    </div> 
+              <div class="Divider"></div>
+     <h1>Servicing cleaning pakage</h1>
+    <p class="desc">
+03 service in a year, without parts replacement. Ideal for regular maintenance to keep your fridge running smoothly.
+    </p>
+
+    <!-- Service Item -->
+    <div class="service-row">
+      <img src="images/fridge/Fridge repair services near me.png" alt="fridge-repair-pune servicing cleaning pakage">
+      <div class="service-info">
+        <h3>Single Door. Double Door.</h3>
+        <div class="price">
+          ₹1499 <span>₹1999</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Refrigerator water Leakage', '₹599')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/tripel door fridge repair services in pune.png" alt="refrigerator service near me pune">
+      <div class="service-info">
+        <h3>Triple Door</h3>
+        <div class="price">
+          ₹1699 <span>₹2199</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Refrigerator water Leakage', '₹599')">Add to Cart</button>
+    </div>
+
+    <div class="service-row">
+      <img src="images/fridge/side by side  fridge repair in pune .png" alt="fridge not cooling repair pune">
+      <div class="service-info">
+        <h3>Side by Side</h3>
+        <div class="price">
+          ₹1699 <span>₹2199</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Refrigerator water Leakage', '₹599')">Add to Cart</button>
+      </div>
+
+          <div class="service-row">
+      <img src="images/fridge/AMC Servicing fridge repair near me.png" alt="fridge not cooling repair near me pune">
+      <div class="service-info">
+        <h3>other</h3>
+        <div class="price">
+          ₹1499 <span>₹1999</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('Refrigerator water Leakage', '₹599')">Add to Cart</button>
+    </div> 
+  </div>
+  
+ 
+  <!-- RIGHT : DESKTOP ONLY -->
+  <aside class="checkout-box">
+    <img src="images/fridge/fridge-repair1.jpg" alt="fridge-repair-pune">
+    <h3>Choose Services</h3>
+    <button class="checkout-btn">Proceed to Checkout →</button>
+    <p>
+      If service is not repaired after inspection, ₹249 inspection charge applicable.
+    </p>
+  </aside>
+</section>
+
+    <div class="two-box-layout">
+
+<div class="offer-wrapper">
+
+  <h2 class="offer-title">
+    Exclusive Offers on Fridge Repair Services in Pune
+  </h2>
+
+  <div class="offer-card">
+    <img src="images/Service tag.png" alt="fridge repair service pune">
+    <div>
+      <h4>We Provide best fridge repair service in Pune</h4>
+      <p>Assured saving on every order</p>
+    </div>
+  </div>
+
+  <div class="offer-card">
+    <img src="images/Discount tag.png" alt="fridge repair discount pune">
+    <div>
+      <h4>5% off on first order</h4>
+      <p>Get flat 5% off on your 1st booking</p>
+    </div>
+  </div>
+
+  <div class="offer-card">
+    <img src="images/offer Tag.png" alt="fridge repair offers pune">
+    <div>
+      <h4>New offers everyday</h4>
+      <p>Get exciting offers daily on all services</p>
+    </div>
+  </div>
+
+  <div class="offer-card">
+    <img src="images/Peyment Tag.png" alt="fridge repair payment pune">
+    <div>
+      <h4>Payment after service delivery</h4>
+      <p>Pay only after work is done</p>
+    </div>
+  </div>
+
+  <a href="tel:+917020991141"><button class="call-bttn">📞 Call Technician</button>
+    </a>
+
+</div>
+
+
+<div class="service-info white">
+
+  <h2>
+    Fast Fridge Repair Near You – SaveraServices, The Go-To Experts for All Refrigerator Brands
+  </h2>
+
+  <p>
+    Is your refrigerator giving you trouble? When you need fast and emergency fridge repair,
+    SaveraServices is your go-to solution! We specialize in repairs for all major brands,
+    including LG, Samsung, Whirlpool, and more.
+  </p>
+
+  <p>
+    Get your fridge back to optimal condition in no time, no matter the brand or issue.
+    Our expert technicians provide doorstep service right in your area.
+  </p>
+
+  <p class="price">
+    Service charges start from – <strong>₹399/-</strong>
+  </p>
+
+  <h4>Repair services include:</h4>
+
+  <ul>
+    <li>Single Door & Double Door Servicing</li>
+    <li>Side by Side Fridge Repair</li>
+    <li>Electrical Repairs</li>
+    <li>Emergency Fridge Repair</li>
+  </ul>
+
+  <p class="note">
+    <strong>Note:</strong> Repair prices may vary based on fridge condition and distance.
+  </p>
+
+</div>
+</div>
+
+<div class="tips-faq-wrapper">
+
+<section class="faq-section">
+  <h2>Maintenance Tips – Better Cooling & Longer Life for Fridge</h2>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Clean Condenser Coils Regularly 
+      </button>
+      <div class="accordion-content">
+        <p>
+          Dirty condenser coils reduce cooling efficiency and increase electricity bills.
+          Clean the coils every 6 months to keep your refrigerator running smoothly and
+          avoid breakdowns. And Savera Services provide fridge cleaning service in Pune.
+          and we best <strong>fridge cleaning service near me in Pune</strong> Savera Services is just a phoen call away.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Avoid Overloading the Refrigerator
+      </button>
+      <div class="accordion-content">
+        <p>
+          Overloading blocks air circulation inside the fridge, causing uneven cooling.
+          Maintain proper spacing to improve performance and extend compressor life.
+          we are best <b>fridge repair service near me in Pune</b> Savera Services is just a phoen call away.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Check Door Gasket & Sealing
+      </button>
+      <div class="accordion-content">
+        <p>
+          A damaged or loose door gasket lets cold air escape, forcing the fridge to work harder.
+          Replace faulty rubber seals to prevent cooling loss and save power. 
+          Savera Services is just a phoen call away for best <b>fridge gasket replacement near me in Pune</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Do Not Put Hot Food Inside
+      </button>
+      <div class="accordion-content">
+        <p>
+          Always allow hot food to cool before placing it in the fridge.
+          Hot items increase internal temperature and stress the compressor.
+          Savera Services is just a phoen call away for best <b>fridge repair service near me in Pune</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        How fast is fridge repair service available?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Our technician usually contacts you within 30 minutes
+          and same-day fridge repair service is available in most Pune areas.
+          Savera Services is just a phoen call away for best <b>fridge repair service near me in Pune</b>.
+        </p>
       </div>
     </div>
   </div>
 </section>
 
-      <div class="hero-btn-group">
-          <a href="tel:+917020991141" class="call-btn"
-            ><i class="fas fa-phone"></i> +91 7020991141</a
-          >
-          <a
-            href="https://wa.me/917020991141"
-            target="_blank"
-            class="whatsapp-btn"
-            ><i class="fab fa-whatsapp"></i> WhatsApp</a
-          >
+<section class="faq-section">
+  <h2>Fridge Repair Near Me – FAQs</h2>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Do you provide fridge repair near me?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Yes, Savera Services provides fast and reliable <b>fridge repair near you</b>
+          in Pune with doorstep service by trained technicians.
+        </p>
       </div>
+    </div>
 
-<section id="Servicing">
-  <div class="section-divider"></div>
-  <h2>Servicing</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <span class="price"><del>₹1099</del> ₹599</span>
-      <img src="images/AC/foam servicing.jpg" alt=" Ac Foam Jet Servicing pune Camp">
-      <h3>Foam Jet Service</h3>
-      <p>High-pressure jet & Foam cleaning for indoor & outdoor unit.</p>
-      <button class="btn" onclick="openModal('Foam Jet Service', '₹599')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Which fridge brands do you repair?
+      </button>
+      <div class="accordion-content">
+        <p>
+          We repair all major refrigerator brands including LG, Samsung,
+          Whirlpool, Godrej, Haier, IFB, Panasonic and more.
+          Savera Services is just a phoen call away for best <b>fridge repair near me in Pune</b>.
+        </p>
+      </div>
     </div>
-    <div class="service-item">
-      <span class="price"><del>₹999</del> ₹499</span>
-      <img src="images/AC/jet servicing.jpg" alt="Pune AC Deep Jet Service">
-      <h3>Deep Jet Service</h3>
-      <p>High-pressure jet cleaning for indoor & outdoor unit.</p>
-      <button class="btn" onclick="openModal('Deep Jet Service', '₹499')"><i class="fas fa-calendar-check"></i> Book Now</button>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        What fridge problems do you fix?
+      </button>
+      <div class="accordion-content">
+        <p>
+          We fix cooling issues, gas leakage, compressor problems,
+          water leakage, unusual noise, and fridge not working issues.
+          amd etc. Savera Services is just a phoen call away for best <b>fridge repair near me</b>.
+        </p>
+      </div>
     </div>
-    <div class="service-item">
-      <span class="price"><del>₹1199</del> ₹799</span>
-      <img src="images/AC/changing-air-filter.jpg" alt="pune AC Hand Servicing">
-      <h3>Hand Service</h3>
-      <p>Manual cleaning of filters and coils for better airflow.</p>
-      <button class="btn" onclick="openModal('Hand Servicing','₹799')"><i class="fas fa-calendar-check"></i> Book Now</button>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        How much does fridge repair cost?
+      </button>
+      <div class="accordion-content">
+        <p>
+          <b>Fridge repair service</b> charges start from ₹199 for inspection.
+          Final cost depends on the problem and spare parts required.
+          Savera Services is just a phoen call away for best <b>fridge repair service near me in Pune</b>.
+        </p>
+      </div>
     </div>
-    <div class="service-item">
-      <span class="price"><del>₹4999</del> ₹2499</span>
-      <img src="images/AC/ac-repair.jpg" alt="AC Regular Maintenance Camp">
-      <h3>Regular Maintenance</h3>
-      <p>Basic inspection & servicing for smooth performance.</p>
-      <button class="btn" onclick="openModal('Regular Maintenance', '₹2499')"><i class="fas fa-calendar-check"></i> Book Now</button>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        How fast is fridge repair service available?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Our technician usually contacts you within 30 minutes
+          and same-day <b>fridge repair service</b> is available in most Pune areas.
+          Savera Services is just a phoen call away for best <b>fridge repair near me in Pune</b>.
+        </p>
+      </div>
     </div>
   </div>
 </section>
+</div>
 
-<section id="Repair">
-  <h2>Repair</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <span class="price"><del>₹599</del> ₹199</span>
-      <img src="images/AC/AC others.jpg" alt=" Pne A/C Not Cooling Repair">
-      <h3>A/C Not Cooling</h3>
-      <p>Complete diagnosis for cooling loss (gas/components).</p>
-      <button class="btn" onclick="openModal('A/C Not Cooling', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+<!-- Wrapper for Description and Repair Cards -->
+<div class="repair-left">
+  <!-- Description & Trusted Customers Section -->
+  <section class="description-container">
+    <!-- Left Side: Description -->
+    <div class="description-left">
+      <h3>Why Choose Savera Services?</h3>
+      <p>
+       Is your refrigerator, freezer, or fridge or other refrigeration unit experiencing loud noises, frequent water leaks,
+insufficient cooling, excessive cooling, or cycling too often? .And you are searching for appliance repair service near me in Pune , Refrigerator repair near me in Pune, Refrigerator repair service in Pune, Fridge repair near me in Pune, appliance service near me in Pune, local appliance repair in Pune,Refrigerator repair service near me in Pune, Freezer repair near me in Pune, Refrigerator service in Pune, Fix Refrigerator in Pune, LG Refrigerator repair in Pune, Samsung LG Refrigerator repair in Pune, whirlpool LG Refrigerator repair in Pune, Appliance services in Pune, Best fridge repair shop in Pune , Refrigerator technician in Pune, Best Refrigerator repair services in Pune,
+WE PROVIDE SERVICE FOR- Refrigerator not cooling in Pune,Fridge not cooling in Pune, Refrigerator installation service in Pune, Refrigerator service in Pune,
+Refrigerator cooling issue service in Pune,Fixing of Refrigerator in Pune,Refrigerator leaking water, Just book the service online and relax. We can send trained, experienced and verified professionals to attend to your fridge repair and appliance services request and get the job done.
+      </p>
     </div>
-    <div class="service-item">
-      <span class="price"><del>₹899</del> ₹499</span>
-      <img src="images/AC/AC water leakage.jpg" alt="AC Water Leakage Fix Camp">
-      <h3>Water Leakage Fix</h3>
-      <p>Leak detection & drain pipe blockage removal.</p>
-      <button class="btn" onclick="openModal('Water Leakage Fix', '₹499')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-    <div class="service-item">
-      <span class="price"><del>₹899</del> ₹499</span>
-      <img src="images/AC/Ac noise.jpeg" alt="AC Noise Rrepair Pune">
-      <h3>AC Noise</h3>
-      <p>Fixing unwanted AC buzzing or rattling sounds.</p>
-      <button class="btn" onclick="openModal('AC Noise', '₹499')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-    <div class="service-item">
-      <span class="price"><del>₹599</del> ₹199</span>
-      <img src="images/AC/ac repair.jfif" alt="AC Repair">
-      <h3>AC Repair & check-up</h3>
-      <p>Complete repair for all AC issues and failures.</p>
-      <button class="btn" onclick="openModal('AC Repair', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-  </div>
-</section>
 
-<section id="Gas Refill">
-  <h2>Gas Refill</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <span class="price"><del>₹2499</del> ₹1299</span>
-      <img src="images/AC/gas filling.jpg" alt=" Ac Gas Top Up Swargate">
-      <h3>Gas Top Up</h3>
-      <p>Refrigerant top-up for better cooling & life.</p>
-      <button class="btn" onclick="openModal('Gas Top Up', '₹1299')"><i class="fas fa-calendar-check"></i> Book Now</button>
+    <!-- Right Side: Trusted Customers Badge -->
+    <div class="description-right">
+      <div class="trusted-customers-badge">
+        <div class="customer-count">499+</div>
+        <p class="customer-text">Trusted Customers</p>
+        <p class="customer-subtext">Happy with our service</p>
+      </div>
     </div>
-    <div class="service-item">
-      <span class="price"><del>₹3199</del> ₹2199</span>
-      <img src="images/AC/ful gas charjing.jpg" alt="AC Full Gas Charging Sawarget pune">
-      <h3>Full Gas Charging</h3>
-      <p>Complete gas refill for efficient cooling.</p>
-      <button class="btn" onclick="openModal('Full Gas Charging', '₹2199')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-  </div>
-</section>
-
-<section id="Installation">
-  <h2>Installation/Uninstallation</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <span class="price"><del>₹2099</del> ₹1299</span>
-      <img src="images/AC/ac installation.jpg" alt="Pune AC Installation">
-      <h3>AC Installation</h3>
-      <p>Split/Window AC installation with full fitting.</p>
-      <button class="btn" onclick="openModal('AC Installation', '₹1299')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-    <div class="service-item">
-      <span class="price"><del>₹1099</del> ₹599</span>
-      <img src="images/AC/ac unistallation.jpg" alt="Pune AC Uninstallation">
-      <h3>AC Uninstallation</h3>
-      <p>Safe AC dismantling & removal by professionals.</p>
-      <button class="btn" onclick="openModal('AC Uninstallation', '₹599')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-  </div>
-</section>
-
+  </section>
+</div>
 <!-- SEO Content Section Start -->
 <section class="seo-section">
   <div class="seo-container">
@@ -632,6 +1067,79 @@
       closeModal();
     }
   };
+      const boxes = document.querySelectorAll('.two-box-layout > div');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+  boxes.forEach(box => {
+    observer.observe(box);
+  });
+    const serviceIcons = document.querySelectorAll('.service-icon');
+
+  const iconObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  serviceIcons.forEach(icon => {
+    iconObserver.observe(icon);
+  });
+
+    const titles = document.querySelectorAll(".accordion-title");
+
+  titles.forEach(title => {
+    title.addEventListener("click", () => {
+
+      titles.forEach(other => {
+        if (other !== title) {
+          other.classList.remove("active");
+          other.nextElementSibling.style.maxHeight = null;
+        }
+      });
+
+      title.classList.toggle("active");
+      const content = title.nextElementSibling;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+  function toggleTip(currentBox) {
+  const allBoxes = document.querySelectorAll('.tip-box');
+
+  allBoxes.forEach(box => {
+    if (box !== currentBox) {
+      box.classList.remove('active');
+      box.querySelector('.arrow').innerText = '▶';
+    }
+  });
+
+  const arrow = currentBox.querySelector('.arrow');
+  currentBox.classList.toggle('active');
+  arrow.innerText = currentBox.classList.contains('active') ? '▼' : '▶';
+}
 </script>
 </body>
 </html>
