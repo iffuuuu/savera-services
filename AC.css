@@ -428,7 +428,6 @@ html {
   }
 }
 
-
 /* 🔥 MOBILE: RIGHT BOX HIDE */
 @media (max-width: 768px) {
   .service-page {
@@ -460,6 +459,7 @@ html {
   .service-row .add-btn {
     margin-left: auto;
     flex-shrink: 0;
+    margin-right: 12px;
   }
 }
 
@@ -867,6 +867,7 @@ section {
 .offer-wrapper {
   max-width: 420px;
   margin: auto;
+  align-items: center;
   padding: 20px;
   border-radius: 20px;
   background: #fff;
@@ -1011,7 +1012,6 @@ section {
   box-shadow: 0 15px 40px rgba(237, 0, 0, 0.25);
 }
 
-
 /* mobile pe upar-niche */
 @media (max-width: 768px) {
   .two-box-layout {
@@ -1025,8 +1025,7 @@ section {
 
 .icon-container {
   display: grid;
-  grid-template-columns: repeat(6, 1fr);
-  gap: 22px; /* thoda tight, premium look */
+  grid-template-columns: repeat(4, 1fr);
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -1044,6 +1043,7 @@ section {
   justify-content: space-between;
   height: 140px;
   text-align: center;
+  width: 200px;
 
   box-shadow: 0 6px 18px rgba(0,0,0,0.08);
   transition: 
@@ -1126,6 +1126,7 @@ section {
 
   .service-icon {
     height: 130px;
+    width: 110px;
   }
 
   .service-icon span {
@@ -1238,4 +1239,7 @@ color: #000;
   .tips-faq-wrapper {
     grid-template-columns: 1fr;
   }
+.paragraph {
+  display: none;
+}
 }

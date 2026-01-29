@@ -444,6 +444,7 @@ html {
   .service-row .add-btn {
     margin-left: auto;
     flex-shrink: 0;
+    margin-right: 12px;
   }
 }
 
