@@ -101,21 +101,86 @@ html {
     display: flex;
   }
 }
-.hero-btn-group {
+/* Responsive hero: image on top for phones, number left + image right on desktop */
+.hero-contact {
   display: flex;
+  flex-direction: column; /* mobile: image first, then buttons */
+  gap: 14px;
   align-items: center;
-  justify-content: center; /* desktop aur phone dono pe center */
-  flex-wrap: nowrap;       /* ek line me rakho */
+  max-width: 1200px;
+  margin: 90px auto 20px;
+  padding: 0 16px;
+}
+.hero-contact .contact-image {
+  width: 100%;
+  order: 0;
+}
+.hero-contact .contact-image img {
+  width: 100%;
+  height: 130%;
+  border-radius: 12px;
+  object-fit: cover;
+  display: block;
+  transform: translateY(-38px);
+  transition: transform 0.25s ease;
+}
+.hero-contact .hero-content {
+  display: flex;
+  flex-direction: column;
   gap: 12px;
-  margin-top: 10px;
+  align-items: flex-start;
+  order: 1;
+  width: 100%;
 }
 
-.hero-btn-group a {
-  text-align: center;
-  padding: 10px 20px;      /* normal padding */
-  font-size: 15px;
-  border-radius: 30px;     /* gol but neat */
-  white-space: nowrap;     /* text line break na ho */
+.hero-contact .hero-content h1 {
+  font-size: 1.15rem;
+  margin: 0 0 8px 0;
+  color: #111;
+}
+
+.hero-contact .hero-content p {
+  margin: 0 0 12px 0;
+  color: #444;
+  line-height: 1.6;
+  font-size: 0.98rem;
+}
+
+.hero-actions {
+  display: flex;
+  gap: 10px;
+  width: 100%;
+}
+
+@media (min-width: 769px) {
+  .hero-contact {
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+    margin-top: 80px;
+  }
+  .hero-contact .hero-content {
+    order: 0;
+    flex: 0 0 48%;
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .hero-contact .hero-content a {
+    width: auto;
+  }
+  .hero-contact .contact-image {
+    order: 1;
+    flex: 1;
+    margin-left: 18px;
+  }
+  .hero-contact .contact-image img {
+    width: 100%;
+    height: auto;
+    max-height: 320px;
+    object-fit: cover;
+    transform: translateY(-68px);
+    transition: transform 0.25s ease;
+  }
 }
 
 
@@ -133,6 +198,50 @@ html {
   border-radius: 30px;     /* gol but neat */
   white-space: nowrap;     /* text line break na ho */
 }
+
+/* Entrance animations for hero and service elements */
+@keyframes fadeUpSmall {
+  from { transform: translateY(18px); opacity: 0; }
+  to   { transform: translateY(0); opacity: 1; }
+}
+
+.hero-contact .contact-image img {
+  animation: fadeUpSmall 0.8s cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 0.05s;
+}
+
+.hero-contact .hero-content h1 {
+  animation: fadeUpSmall 0.8s cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 0.15s;
+}
+
+.hero-contact .hero-content p {
+  animation: fadeUpSmall 0.9s cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 0.25s;
+}
+
+.hero-actions a {
+  animation: fadeUpSmall 0.9s cubic-bezier(.2,.9,.2,1) both;
+  animation-delay: 0.35s;
+}
+
+.service-box {
+  animation: fadeUpSmall 0.8s ease both;
+  animation-delay: 0.1s;
+}
+
+.service-card {
+  animation: fadeUpSmall 0.85s ease both;
+  animation-delay: 0.15s;
+}
+
+/* Stagger service-card children on larger screens */
+@media (min-width: 769px) {
+  .service-card:nth-child(1) { animation-delay: 0.12s; }
+  .service-card:nth-child(2) { animation-delay: 0.18s; }
+  .service-card:nth-child(3) { animation-delay: 0.24s; }
+}
+
 }
 
 .call-btn {
@@ -168,94 +277,279 @@ html {
 }
 
 
+/* PAGE LAYOUT */
+.service-page {
+  display: grid;
+  grid-template-columns: 1fr 350px;
+  gap: 40px;
+  max-width: 1200px;
+  margin: auto;
+  padding: 40px 20px;
+}
+
+/* LEFT */
+.services-list h1 {
+  font-size: 32px;
+  margin-bottom: 10px;
+}
+
+.desc {
+  color: #555;
+  margin-bottom: 30px;
+}
+
+/* SERVICE ROW */
+.service-row {
+  display: flex;
+  align-items: center;
+  padding: 20px 0;
+
+  gap: 20px;
+}
+.service-row {
+  position: relative;
+  padding: 26px 0;
+}
+
+.service-row::after {
+  content: "";
+  position: absolute;
+  left: 80px;          /* image ke baad se start */
+  right: 0;
+  bottom: 0;
+  height: 1px;         /* 🔥 thickness */
+  background: linear-gradient(
+    to right,
+    #d5d5d5,
+    #d5d5d5,
+    #d5d5d5
+  );
+}
+
+
+.service-row.no-line::after {
+  display: none;
+}
+
+
+.service-row img {
+  width: 70px;
+  height: 80px;
+  object-fit: contain;
+  transition:
+    transform 0.5s cubic-bezier(.4,0,.2,1),
+    filter 0.5s ease;
+}
+
+.service-info {
+  flex: 1;
+}
+
+.service-info h3 {
+  margin: 0;
+}
+
+.price {
+  color: #0a8f3c;
+  font-weight: 600;
+}
+
+.price span {
+  color: #999;
+  text-decoration: line-through;
+  margin-left: 6px;
+}
+
+.add-btn {
+  background: #0a8f3c;
+  color: #fff;
+  border: none;
+  padding: 10px 18px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+/* RIGHT CHECKOUT BOX */
+.checkout-box {
+  background: #fff;
+  border-radius: 14px;
+  padding: 25px;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+  text-align: center;
+  align-self: flex-start;   /* 🔥 important */
+  height: fit-content;      /* 🔥 stops stretching */
+}
+
+.checkout-box img {
+  max-width: 150px;
+  margin-bottom: 15px;
+}
+
+.checkout-btn {
+  width: 100%;
+  background: #0b7a99;
+  color: #fff;
+  border: none;
+  padding: 14px;
+  border-radius: 8px;
+  font-size: 16px;
+  margin: 15px 0;
+} 
+.Divider {
+  width: 20.4cm;
+  height: 3px;
+  margin: 0 auto 20px;
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0);
+  border-radius: 10px;
+    }
+@media (min-width: 992px) {
+  .checkout-box {
+    position: sticky;
+    top: 120px;
+  }
+}
+
+
+/* 🔥 MOBILE: RIGHT BOX HIDE */
+@media (max-width: 768px) {
+  .service-page {
+    grid-template-columns: 1fr;
+  }
+
+  .checkout-box {
+    display: none;
+  }
+  .desc {
+    font-size: 14px;
+  }
+
+  .service-row {
+    align-items: center;
+  }
+
+  .service-row .service-info {
+    flex: 1;
+  }
+    .Divider {
+  width: 360px;
+  height: 3px;
+  margin: 0 auto 20px;
+  background: linear-gradient(to right, #e0e0e0, #e0e0e0);
+  border-radius: 10px;
+}
+
+  .service-row .add-btn {
+    margin-left: auto;
+    flex-shrink: 0;
+    margin-right: 12px;
+  }
+}
+
 
     .services h2 {
       text-align: center;
-      margin-bottom: 20px;
+      margin-bottom: 40px;
       font-size: 2rem;
       color: #2c3e50;
     }
 
-    .service-list {
-      display: grid;
-      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-      gap: 20px;
-    }
-
-    .service-item {
-      background: #fff;
-      padding: 15px;
+    /* Description Container */
+    .description-container {
+      display: flex;
+      gap: 40px;
+      align-items: center;
+      margin-bottom: 30px;
+      max-width: 1200px;
+      margin-left: auto;
+      margin-right: auto;
+      padding: 30px;
+      background: #f9f9f9;
       border-radius: 15px;
-      box-shadow: 0 5px 15px rgba(0,0,0,0.1);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-      cursor: pointer;
-      position: relative;
+    }
+
+    .description-left {
+      flex: 1;
+    }
+
+    .description-left h3 {
+      font-size: 1.8rem;
+      color: #2c3e50;
+      margin-bottom: 15px;
+    }
+
+    .description-left p {
+      font-size: 1rem;
+      line-height: 1.6;
+      color: #666;
+    }
+
+    .description-right {
+      flex: 1;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .trusted-customers-badge {
       text-align: center;
+      background: linear-gradient(135deg, #001aff, #0a3cc7);
+      color: white;
+      padding: 40px;
+      border-radius: 15px;
+      box-shadow: 0 5px 20px rgba(0,26,255,0.3);
     }
-    
-#Gas\ Refill .service-list {
-  grid-template-columns: repeat(2, 300px); 
-  justify-content: center;
-  gap: 20px;
-}
 
-
-#Gas\ Refill .service-item {
-  padding: 15px;
-  max-width: 300px;
-}
-
-#Gas\ Refill .service-item img {
-  height: 190px;
-}
-
-#Installation .service-list {
-  grid-template-columns: repeat(2, 300px);
-  justify-content: center;
-  gap: 20px;
-}
-
-#Installation .service-item {
-  padding: 15px;
-  max-width: 300px;
-}
-
-#Installation .service-item img {
-  height: 190px;
-}
-
-@media (max-width: 768px) {
-  #Gas\ Refill .service-list {
-    grid-template-columns: 1fr;
-    justify-content: center;
-  }
-
-  #Gas\ Refill .service-item {
-    max-width: 100%;
-  }
-
-  #Gas\ Refill .service-item img {
-    height: auto;
-  }
-
-   #Installation .service-list {
-    grid-template-columns: 1fr; 
-    justify-content: center;
-  }
-
-  #Installation .service-item {
-    max-width: 100%;
-  }
-
-  #Installation .service-item img {
-    height: auto;
-  }
-}
-
-    .service-item:hover {
-      transform: translateY(-10px);
-      box-shadow: 0 10px 20px rgba(0,0,0,0.15);
+    .customer-count {
+      font-size: 3.5rem;
+      font-weight: bold;
+      margin-bottom: 10px;
     }
+
+    .customer-text {
+      font-size: 1.3rem;
+      margin: 0;
+      font-weight: 600;
+    }
+
+    .customer-subtext {
+      font-size: 0.95rem;
+      margin: 8px 0 0 0;
+      opacity: 0.9;
+    }
+
+
+    /* Mobile Responsive */
+    @media (max-width: 768px) {
+      .repair-wrapper {
+        flex-direction: column;
+        gap: 30px;
+      }
+
+      .repair-left .description-container {
+        order: 2;
+        flex-direction: column;
+      }
+
+      .repair-left .description-right {
+        display: flex;
+        order: 1;
+        width: 100%;
+        justify-content: center;
+        margin-bottom: 20px;
+      }
+      .description-left p {
+        font-size: smaller;
+      }
+
+      .repair-left .trusted-customers-badge {
+        width: 100%;
+      }
+
+      .repair-right {
+        order: 3;
+      }
+    }
+
 
     .section-divider {
   width: 10cm;
@@ -263,164 +557,10 @@ html {
   margin: 0 auto 20px;
   background: linear-gradient(to right, #000000, #ffffff);
   border-radius: 10px;
-    }
-
-    .service-item img {
-      width: 100%;
-      height: 180px;
-      object-fit: cover;
-      border-radius: 10px;
-    }
-    
-
-#Repair h2,
-#Installation h2 {
-  text-align: center;
-  margin-bottom: 15px;
-}
-
-
-#Repair .service-list,
-#Installation .service-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-#Repair h2,
-#Installation h2 {
-  text-align: center;
-}
-
-#Repair .service-list,
-#Installation .service-list {
-  display: flex;
-  justify-content: center;
-  gap: 20px;
-  flex-wrap: wrap;
-}
-
-#Repair .service-item,
-#Installation .service-item {
-  width: 300px;
-  max-width: 100%;
-  text-align: center;
-}
-
-    .service-item h3 {
-      font-size: 1.1rem;
-      margin: 10px 0 5px;
-    }
-
-    .service-item p {
-      font-size: 0.8rem;
-      color: #555;
-      margin-bottom: 10px;
-    }
-
-    .btn {
-      display: inline-block;
-      background: linear-gradient(135deg, #3498db, #2980b9);
-      color: white;
-      padding: 10px 18px;
-      border-radius: 10px;
-      text-decoration: none;
-      font-weight: bold;
-      transition: background 0.3s ease, transform 0.2s ease;
-      border: none;
-      cursor: pointer;
-    }
-
-    .btn:hover {
-      background: #2470a3;
-      transform: scale(1.05);
-    }
-
-    .price {
-      background: linear-gradient(135deg, #3498db, #2980b9);
-      color: white;
-      padding: 4px 10px;
-      border-radius: 10px;
-      position: absolute;
-      margin-top: -5px;
-      margin-left: -5px;
-      font-size: 0.85rem;
-      box-shadow: 0 0 10px rgba(52, 152, 219, 0.4);
-      z-index: 1;
-    }
-
-    .price del {
-  color: rgba(255, 255, 255, 0.712); 
-  font-size: 0.8em;
-  margin-right: 5px;
-}
-
-.service-box {
-  max-width: 450px;
-  margin: 40px auto;
-  padding: 15px;
-  background: #fff;
-  border-radius: 12px;
-  box-shadow: 0 2px 8px rgba(0,0,0,0.05);
-  text-align: center;
-}
-
-.box-title {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 15px;
-}
-
-.service-row {
-  display: flex;
-  justify-content: space-between;
-  gap: 10px;
-}
-
-.service-card {
-  background: #fff;
-  border-radius: 8px;
-  padding: 8px;
-  width: 23%;
-  box-shadow: 0 1px 4px rgba(0,0,0,0.1);
-  transition: 0.3s;
-}
-
-.service-card:hover {
-  transform: translateY(-2px);
-}
-
-.service-card img {
-  width: 100%;
-  height: 60px;
-  object-fit: contain;
-  border-radius: 5px;
-  margin-bottom: 6px;
-}
-
-.service-card p {
-  font-size: 13px;
-  font-weight: 500;
-  margin: 0;
-  line-height: 1.2;
-}
+ }
 
 @media (max-width: 768px) {
-  .service-card {
-    width: 23%;
-    padding: 6px;
-  }
-
-  .service-card img {
-    height: 30px;
-  }
-
-  .service-card p {
-    font-size: 12px;
-    font-weight: 600;
-  }
-        .section-divider {
+ .section-divider {
   width: 300px;
   height: 1px;
   margin: 0 auto 20px;
@@ -698,4 +838,383 @@ section {
   color: #0077cc;
 }
 
+
+.offer-wrapper {
+  max-width: 420px;
+  margin: auto;
+  padding: 20px;
+  border-radius: 20px;
+  background: #fff;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+}
+
+.offer-title {
+  text-align: center;
+  font-size: 18px;
+  margin-bottom: 20px;
+}
+
+.offer-card {
+  display: flex;
+  gap: 14px;
+  align-items: center;
+  padding: 14px;
+  margin-bottom: 14px;
+  border-radius: 16px;
+  background: #f9f9f9;
+  border: 1px solid #eee;
+}
+
+.offer-card img {
+  width: 42px;
+  height: 42px;
+}
+
+.offer-card h4 {
+  font-size: 14px;
+  margin: 0 0 4px;
+}
+
+.offer-card p {
+  font-size: 12px;
+  margin: 0;
+  color: #666;
+}
+
+.call-bttn {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 30px;
+  background: linear-gradient(135deg, #7bdbb6, #4da8da);
+  color: #fff;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.service-info.white {
+  max-width: 700px;
+  margin: auto;
+  padding: 24px;
+  background: #ffffff;
+  border-radius: 18px;
+  border: 1px solid #eaeaea;
+  box-shadow: 0 10px 30px rgba(0,0,0,0.06);
+  color: #222;
+}
+
+.service-info.white h2 {
+  font-size: 20px;
+  margin-bottom: 14px;
+  line-height: 1.4;
+}
+
+.service-info.white h4 {
+  margin-top: 18px;
+  margin-bottom: 10px;
+  font-size: 16px;
+}
+
+.service-info.white p {
+  font-size: 14px;
+  line-height: 1.7;
+  color: #444;
+  margin-bottom: 12px;
+}
+
+.service-info.white .price {
+  background: #f5f7fa;
+  padding: 10px 14px;
+  border-radius: 10px;
+  font-weight: 500;
+}
+
+.service-info.white ul {
+  padding-left: 18px;
+  margin-bottom: 14px;
+}
+
+.service-info.white ul li {
+  font-size: 14px;
+  margin-bottom: 6px;
+}
+
+.service-info.white .note {
+  font-size: 13px;
+  color: #666;
+  border-left: 3px solid #4da8da;
+  padding-left: 10px;
+}
+.two-box-layout {
+  display: flex;
+  gap: 12px;   /* yahin se control hota hai */
+  align-items: stretch;
+}
+
+/* desktop look same rahe */
+.two-box-layout > div {
+  flex: 1;
+}
+.two-box-layout {
+  position: relative;     /* 🔥 absolute hata diya */
+  margin-top: 80px;       /* upar se safe distance */
+  z-index: 1;
+}
+
+
+.two-box-layout > div {
+  background: #ffffff;
+  border-radius: 16px;
+  padding: 20px;
+  box-shadow: 0 8px 25px rgba(0,0,0,0.4);
+
+  /* start hidden */
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition: all 0.6s ease;
+}
+
+/* jab visible ho */
+.two-box-layout > div.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* hover effect – same kal wali feel */
+.two-box-layout > div:hover {
+  transform: translateY(-8px) scale(1.02);
+  box-shadow: 0 15px 40px rgba(237, 0, 0, 0.25);
+}
+
+
+/* mobile pe upar-niche */
+@media (max-width: 768px) {
+  .two-box-layout {
+    flex-direction: column;
+  }
+}
+
+/* ===============================
+   ICON SERVICES – SEXY VERSION
+================================ */
+
+.icon-container {
+  display: grid;
+  grid-template-columns: repeat(6, 1fr);
+  gap: 22px; /* thoda tight, premium look */
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+/* Card base */
+.service-icon {
+  background: #ffffff;
+  border-radius: 18px;
+  padding: 22px 10px;
+  text-decoration: none;
+  color: #111;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+  height: 140px;
+  text-align: center;
+
+  box-shadow: 0 6px 18px rgba(0,0,0,0.08);
+  transition: 
+    transform 0.45s cubic-bezier(.4,0,.2,1),
+    box-shadow 0.45s ease,
+    background 0.45s ease;
+  
+  position: relative;
+  overflow: hidden;
+}
+
+/* Soft glow layer */
+.service-icon::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  background: radial-gradient(circle at top,
+      rgba(0,106,255,0.18),
+      transparent 70%);
+  opacity: 0;
+  transition: opacity 0.45s ease;
+}
+
+/* Icon image */
+.service-icon img {
+  width: 60px;
+  height: 60px;
+  object-fit: contain;
+  transition:
+    transform 0.5s cubic-bezier(.4,0,.2,1),
+    filter 0.5s ease;
+}
+
+/* Text */
+.service-icon span {
+  font-size: 14px;
+  margin-top: auto;
+  line-height: 1.1;
+  transition: transform 0.4s ease, color 0.4s ease;
+}
+
+/* ===============================
+   HOVER – REAL SEXY PART
+================================ */
+
+.service-icon:hover {
+  transform: translateY(-8px);
+  background: #f4f8ff;
+  box-shadow: 0 18px 35px rgba(0,0,0,0.18);
+}
+
+.service-icon:hover::before {
+  opacity: 1;
+}
+
+.service-icon:hover img {
+  transform: scale(1.18) rotate(-6deg);
+  filter: drop-shadow(0 10px 20px rgba(0,0,0,0.35));
+}
+
+.service-icon:hover span {
+  transform: translateY(-2px);
+  color: #006aff;
+}
+
+
+.service-icon img {
+  animation: floatIcon 3.8s ease-in-out infinite;
+}
+
+/* ===============================
+   MOBILE
+================================ */
+
+@media (max-width: 768px) {
+  .icon-container {
+    grid-template-columns: repeat(3, 1fr);
+    gap: 16px;
+  }
+
+  .service-icon {
+    height: 130px;
+  }
+
+  .service-icon span {
+    font-size: 13px;
+  }
+}
+/* ===============================
+   ICON ENTRY ANIMATION (MOBILE)
+================================ */
+
+.service-icon {
+  opacity: 0;
+  transform: translateY(40px) scale(0.96);
+  transition:
+    opacity 0.6s ease,
+    transform 0.6s cubic-bezier(.4,0,.2,1);
+}
+
+/* jab visible ho */
+.service-icon.show {
+  opacity: 1;
+  transform: translateY(0) scale(1);
+}
+
+/* thoda delay look ke liye */
+.service-icon:nth-child(1) { transition-delay: 0.05s; }
+.service-icon:nth-child(2) { transition-delay: 0.1s; }
+.service-icon:nth-child(3) { transition-delay: 0.15s; }
+.service-icon:nth-child(4) { transition-delay: 0.2s; }
+.service-icon:nth-child(5) { transition-delay: 0.25s; }
+.service-icon:nth-child(6) { transition-delay: 0.3s; }
+.service-icon:nth-child(7) { transition-delay: 0.35s; }
+.service-icon:nth-child(8) { transition-delay: 0.4s; }
+.service-icon:nth-child(9) { transition-delay: 0.45s; }
+
+.faq-section {
+  max-width: 900px;
+  margin: 50px auto;
+  padding: 0 15px;
+}
+.faq-section h2{
+color: #000;
+}
+.accordion-title {
+  width: 100%;
+  background: #ffffff;
+  border: none;
+  padding: 16px;
+  font-size: 18px;
+  font-weight: 600;
+  text-align: left;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  border-radius: 8px;
+  margin-bottom: 8px;
+}
+
+.arrow {
+  transition: transform 0.3s ease;
+  font-size: 18px;
+}
+
+.accordion-title.active .arrow {
+  transform: rotate(180deg);
+}
+
+.accordion-content {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.4s ease;
+  background: #ffffff;
+  padding: 0 16px;
+}
+
+.accordion-content p {
+  margin: 15px 0;
+  line-height: 1.6;
+  color: #333;
+}
+.fridge-tips-section {
+  margin: 40px 0;
+}
+
+.fridge-tips-section h2 {
+  text-align: center;
+  margin-bottom: 20px;
+}
+
+/* MAIN WRAPPER */
+.tips-faq-wrapper {
+  max-width: 1200px;
+  margin: 60px auto;
+  padding: 0 15px;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 30px;
+  align-items: start;
+}
+
+/* REMOVE center lock from FAQ */
+.faq-section {
+  max-width: 100%;
+  margin: 0;
+}
+
+/* MOBILE VIEW */
+@media (max-width: 991px) {
+  .tips-faq-wrapper {
+    grid-template-columns: 1fr;
+  }
+  .paragraph {
+  display: none;
+}
+}
 
