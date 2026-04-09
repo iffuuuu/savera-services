@@ -26,80 +26,391 @@
   </div>
 </nav>
 
-<section id="services" class="services">
-    <h2>TV Services</h2>
-    </h2>
-    <div class="service-box">
-        <p class="box-title">Select a service</p>
-        <div class="service-row" style="display: flex; gap: 16px; justify-content: center; flex-wrap: wrap;">
-            <div class="service-card" style="flex: 0 1 120px; text-align: center;">
-                <a href="#Repair" class="a-tag">
-                    <img src="images/TV/istockphoto-1389783400-612x612.jpg" alt="TV Repair Service hadapsar" style="width: 70px; height: 70px; object-fit: cover;">
-                    <p>Repair</p>
-                </a>
-            </div>
-            <div class="service-card" style="flex: 0 1 120px; text-align: center;">
-                <a href="#Installation" class="a-tag">
-                    <img src="images/TV/install.jpg" alt="TV Uninstallation service Pune" style="width: 70px; height: 70px; object-fit: cover;">
-                    <p>Installa</p>
-                </a>
-            </div>
-        </div>
+<!-- Responsive hero: image on top for phones, number left and image right on desktop -->
+<div class="hero-contact">
+  <div class="contact-image">
+    <img src="images/TV/istockphoto-1389783400-612x612.jpg" alt="TV Repair Pune" />
+  </div>
+  <div class="hero-content">
+    <h1>Reliable TV Repair Services in Pune – Expert Technicians</h1>
+    <p>
+      Need reliable TV repair services in Pune? SaveraServices offers fast, affordable, and professional
+      TV repair services near you, for all models and brands. Book your repair now!
+    </p>
+    <div class="hero-actions">
+      <a href="tel:+917020991141" class="call-btn"><i class="fas fa-phone"></i>Call Now</a>
+      <a href="https://wa.me/917020991141" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
+  </div>
+</div>
+
+         <section class="services">
+      <div class="section-divider"></div>
+      <h2 data-aos="fade-up">Our Repair Services</h2>
+  <div class="icon-container">
+  <a href="#Repair" class="service-icon" data-aos="fade-up">
+    <img src="images/tv/tv.png" alt="TV Repair in Pune camp" class="custom-icon">
+    <span>Repair</span>
+  </a>
+
+  <a href="#Installation" class="service-icon" data-aos="fade-up">
+    <img src="images/TV/uninstall.jpg" alt="TV Repair in Pune" class="custom-icon">
+    <span>Installation & Uninstallation</span>
+  </a>
+
+</div>
 </section>
 
-      <div class="hero-btn-group">
-          <a href="tel:+917020991141" class="call-btn"
-            ><i class="fas fa-phone"></i> +91 7020991141</a
-          >
-          <a
-            href="https://wa.me/917020991141"
-            target="_blank"
-            class="whatsapp-btn"
-            ><i class="fab fa-whatsapp"></i> WhatsApp</a
-          >
+    <section class="service-page" id="Repair">
+
+  <!-- LEFT : SERVICES LIST -->
+  <div class="services-list">
+
+      <h1>Repair</h1>
+      <p class="desc">
+  Looking for TV repair and servicing near me in Pune? We fix all TV problems including no picture, sound issues, backlight failure, motherboard problems with fast doorstep service.
+  Book trusted TV repair experts in Pune with Savera Services and enjoy reliable viewing performance all season.
+      </p>
+
+      <!-- Service Item -->
+      <div class="service-row">
+        <img src="images/tv/tv.png" alt="TV repair koregaon pune">
+        <div class="service-info">
+          <h3>TV Repair</h3>
+          <div class="price">
+            ₹249 <span>₹399</span>
+          </div>
+        </div>
+          <button class="add-btn" onclick="openModal('TV Repair', '₹249')">Add to Cart</button>
       </div>
 
-<section id="Repair">
-  <div class="section-divider"></div>
-  <h2>Repair</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <span class="price"><del>₹499</del> ₹199</span>
-      <img src="images/TV/istockphoto-1389783400-612x612.jpg" alt="TV Repair service hadapsar pune Camp">
-      <h3>TV Check-Up</h3>
-      <p>Visitation fee will be adjusted in the final repair quote</p>
-      <button class="btn" onclick="openModal('TV Repair', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+            <div class="service-row no-line">
+        <img src="images/TV/istockphoto-1389783400-612x612.jpg" alt="TV repair services pune">
+        <div class="service-info">
+          <h3>TV voice Problem</h3>
+          <div class="price"  id="Installation">
+            ₹249 <span>₹399</span>
+          </div>
+        </div>
+          <button class="add-btn" onclick="openModal('TV Voice Problem', '₹249')">Add to Cart</button>
+      </div> 
+      <div class="Divider"></div>
+    <h1>Installation & Uninstallation</h1>
+    <p class="desc">
+  Need TV installation or uninstallation services in Pune? Our experts provide fast, secure, and affordable 
+  TV mounting and reinstallation at your doorstep. Book now for hassle-free TV setup!
+    </p>
+
+    <!-- Service Item -->
+    <div class="service-row">
+      <img src="images/tv/uninstall.jpg" alt="TV repair pune near me">
+      <div class="service-info">
+        <h3>TV Installation</h3>
+        <div class="price">
+          ₹399 <span>₹999</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('TV Installation', '₹399')">Add to Cart</button>
     </div>
 
-    <div class="service-item">
-      <span class="price"><del>₹499</del> ₹199</span>
-      <img src="images/TV/display.jpg" alt="TV Repair nana Peth Pune">
-      <h3>TV display</h3>
-      <p>Visitation fee will be adjusted in the final repair quote</p>
-      <button class="btn" onclick="openModal('TV display', '₹199')"><i class="fas fa-calendar-check"></i> Book Now</button>
+          <div class="service-row no-line">
+      <img src="images/tv/install.jpg" alt="TV repair services camp pune">
+      <div class="service-info">
+        <h3>TV Uninstallation</h3>
+        <div class="price"  id="CoolingIssue">
+          ₹349 <span>₹999</span>
+        </div>
+      </div>
+         <button class="add-btn" onclick="openModal('TV Uninstallation', '₹349')">Add to Cart</button>
+    </div> 
+  </div>
+    <aside class="checkout-box">
+    <img src="images/tv/display.jpg" alt="TV-repair-pune">
+    <h3>Choose Services</h3>
+    <button class="checkout-btn" onclick="openModal('TV Inspection')">Proceed to Checkout →</button>
+    <p>
+      If TV is not repaired after inspection, ₹249 inspection charge applicable.
+    </p>
+  </aside>
+
+</section>
+
+    <div class="two-box-layout">
+
+<div class="offer-wrapper">
+
+  <h2 class="offer-title">
+    Exclusive Offers on TV Repair Services in Pune 
+  </h2>
+
+  <div class="offer-card">
+    <img src="images/Service tag.png" alt="TV repair service pune">
+    <div>
+      <h4>We Provide best TV repair service in Pune</h4>
+      <p>Assured saving on every order</p>
     </div>
+  </div>
+
+  <div class="offer-card">
+    <img src="images/Discount tag.png" alt="TV repair discount pune">
+    <div>
+      <h4>5% off on first order</h4>
+      <p>Get flat 5% off on your 1st booking</p>
+    </div>
+  </div>
+
+  <div class="offer-card">
+    <img src="images/offer Tag.png" alt="TV repair offers pune">
+    <div>
+      <h4>New offers everyday</h4>
+      <p>Get exciting offers daily on all services</p>
+    </div>
+  </div>
+
+  <div class="offer-card">
+    <img src="images/Peyment Tag.png" alt="TV repair payment pune">
+    <div>
+      <h4>Payment after service delivery</h4>
+      <p>Pay only after work is done</p>
+    </div>
+  </div>
+
+  <a href="tel:+917020991141"><button class="call-bttn">📞 Call Technician</button>
+    </a>
+
+</div>
+
+
+<div class="service-info white">
+
+  <h2>
+    Fast TV Repair Near You – SaveraServices, The Go-To Experts for All TV Brands
+  </h2>
+
+  <p>
+    Is your TV giving you trouble? When you need fast and emergency TV repair,
+    SaveraServices is your go-to solution! We specialize in repairs for all major brands,
+    including Sony, Samsung, LG, Panasonic, Mi, OnePlus, Philips and more.
+  </p>
+
+  <p>
+    Get your TV back to optimal condition in no time, no matter the brand or issue.
+    Our expert technicians provide doorstep service right in your area.
+  </p>
+
+  <p class="price">
+    Service charges start from – <strong>₹399/-</strong>
+  </p>
+
+  <h4>Repair services include:</h4>
+
+  <ul>
+    <li>TV Screen Repair</li>
+    <li>Backlight Replacement</li>
+    <li>Motherboard Repair</li>
+    <li>Emergency TV Repair</li>
+  </ul>
+
+  <p class="note">
+    <strong>Note:</strong> Repair prices may vary based on TV condition and distance.
+  </p>
+
+</div>
+</div>
+
+ <div class="tips-faq-wrapper">
+
+<section class="faq-section">
+  <h2>TV Service Near Me – FAQs</h2>
+
+  <div class="accordion">
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Do you provide TV service near me in Pune?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Yes, Savera Services provides fast and reliable <b>TV repair and service near you in Pune</b> 
+          with doorstep support by trained technicians.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        Which TV brands do you service?
+      </button>
+      <div class="accordion-content">
+        <p>
+          We service and repair all major TV brands including Sony, Samsung, LG, Panasonic,
+          Mi, OnePlus, Philips, Motorola, Vu, and many local brands.
+          Savera Services is just a phone call away for the best <b>TV service near me in Pune</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        What TV problems do you fix?
+      </button>
+      <div class="accordion-content">
+        <p>
+          We fix no picture, sound issues, backlight failure, motherboard problems, HDMI port issues,
+          smart TV app problems, and complete TV breakdown issues.
+          Contact Savera Services for trusted <b>TV repair near me in Pune</b>.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        How much does TV service cost?
+      </button>
+      <div class="accordion-content">
+        <p>
+          <b>TV service charges</b> start from ₹249 for inspection.
+          Final cost depends on the issue and spare parts required.
+          We provide affordable <b>TV servicing near me in Pune</b> with transparent pricing.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        How quickly is TV service available?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Our technician usually contacts you within 30 minutes,
+          and same-day <b>TV repair service in Pune</b> is available in most areas.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        What to do if TV is running but has no picture?
+      </button>
+      <div class="accordion-content">
+        <p>
+          If your TV is running but has no picture, it may be due to 
+          backlight failure, display panel issue, or motherboard problem.
+          Savera Services provides expert <b>TV repair in Pune</b> with skilled technicians and reliable solutions.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        What to do if TV is making noise?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Unusual noise in a TV may indicate loose components, cooling fan issues, or motherboard problems.
+          It's best to get professional help to prevent further damage.
+          We offer trusted <b>TV servicing near me in Pune</b> with fast support.
+        </p>
+      </div>
+    </div>
+
+    <div class="accordion-item">
+      <button class="accordion-title">
+        <span class="arrow">▼</span>
+        What to do if TV screen is cracked?
+      </button>
+      <div class="accordion-content">
+        <p>
+          Cracked TV screens require panel replacement depending on the severity.
+          Immediate inspection helps prevent further damage.
+          Savera Services offers professional <b>TV repair service in Pune</b> with genuine parts and warranty.
+        </p>
+      </div>   
+    </div>
+
   </div>
 </section>
 
-<section id="Installation">
-  <h2>Installation/Uninstallation</h2>
-  <div class="service-list">
-    <div class="service-item">
-      <span class="price"><del>₹599</del> ₹349</span>
-      <img src="images/TV/install.jpg" alt="TV Installation Bhawani Peth Pune">
-      <h3>installation</h3>
-      <p>Visitation fee will be adjusted in the final repair quote</p>
-      <button class="btn" onclick="openModal('Installation', '₹299')"><i class="fas fa-calendar-check"></i> Book Now</button>
-    </div>
-    <div class="service-item">
-      <span class="price"><del>₹599</del> ₹299</span>
-      <img src="images/TV/uninstall.jpg" alt="unistallation TV service Pune">
-      <h3>Uninstallation</h3>
-      <p>Visitation fee will be adjusted in the final repair quote</p>
-      <button class="btn" onclick="openModal('Uninstallation', '₹299')"><i class="fas fa-calendar-check"></i> Book Now</button>
-  </div>
+  
+  <div class="paragraph">
+    
+    <h2>Why TV Service is Important</h2>
+    <p>
+        Regular maintenance and timely servicing are essential to keep your TV running efficiently. 
+        Without proper care, TVs may suffer from reduced picture quality, sound issues, 
+        and a shorter lifespan. If you are looking for the best TV service in Pune or searching for 
+        TV service near me in Pune, choosing a professional service provider is important.
+    </p>
+
+    <p>
+        Savera Services connects you with experienced TV technicians in Pune who handle all types 
+        of display issues. From minor faults to complete system repairs, our experts ensure safe, reliable, 
+        and long-lasting solutions for residential, commercial, and industrial TVs.
+    </p>
+
+    <h2>Our TV Services in Pune</h2>
+
+    <p>
+        TV Repair Service in Pune <br>
+        TV Installation & Mounting <br>
+        TV Screen & Backlight Repair <br>
+        TV Motherboard Repair <br>
+        TV Sound Problem Repair <br>
+        TV Maintenance & Annual Service <br>
+        Smart TV Software Updates <br><br>
+
+        Whether you need TV repair near me in Pune or complete TV servicing in Pune, 
+        Savera Services is your trusted local solution.
+    </p>
+
+</div>
+
+</div>
 </section>
+</div>
+
+
+<!-- Wrapper for Description and Repair Cards -->
+<div class="repair-left">
+  <!-- Description & Trusted Customers Section -->
+  <section class="description-container">
+    <!-- Left Side: Description -->
+    <div class="description-left">
+      <h3>Why Choose Savera Services?</h3>
+      <p>
+TV Repair & Service in Pune
+Is your TV experiencing no picture, sound issues, backlight failure, motherboard problems, or frequent shutdowns? If you are searching for TV repair near me in Pune, TV service near me, or trusted appliance repair service in Pune, Savera Services is here to help.
+We provide professional TV repair and servicing in Pune with trained, experienced, and verified technicians. Whether it's a display issue, installation service, screen replacement, or complete breakdown, we deliver fast doorstep solutions across Pune.
+We Provide Services For:
+TV not displaying picture in Pune
+TV sound problems and speaker repair
+TV installation and wall mounting
+TV motherboard and power board repair
+TV backlight and panel issues in Pune
+Smart TV software and Wi-Fi problems
+LED, LCD, and Smart TV repair
+Just book your TV service online in Pune and relax. Our experts ensure reliable repair, transparent pricing, and quality workmanship every time.
+</p>
+    </div>
+
+    <!-- Right Side: Trusted Customers Badge -->
+    <div class="description-right">
+      <div class="trusted-customers-badge">
+        <div class="customer-count">499+</div>
+        <p class="customer-text">Trusted Customers</p>
+        <p class="customer-subtext">Happy with our service</p>
+      </div>
+    </div>
+  </section>
+</div>
+
 
 <section class="seo-section" id="tv-repair-pune">
   <h2>TV Repair & Service in Pune – LED, LCD, Smart & Plasma</h2>
@@ -208,7 +519,7 @@
           <div class="circle">1</div>
           <div class="text">
             <strong>Inspection & quote</strong>
-            <p>We inspect the appliance & share a repair quote for approval</p>
+            <p>We inspect the TV & share a repair quote for approval</p>
           </div>
         </div>
         <div class="step">             
@@ -296,6 +607,78 @@
       closeModal();
     }
   };
+    const boxes = document.querySelectorAll('.two-box-layout > div');
+
+  const observer = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    {
+      threshold: 0.25
+    }
+  );
+
+  boxes.forEach(box => {
+    observer.observe(box);
+  });
+    const serviceIcons = document.querySelectorAll('.service-icon');
+
+  const iconObserver = new IntersectionObserver(
+    entries => {
+      entries.forEach(entry => {
+        if (entry.isIntersecting) {
+          entry.target.classList.add('show');
+        }
+      });
+    },
+    {
+      threshold: 0.2
+    }
+  );
+
+  serviceIcons.forEach(icon => {
+    iconObserver.observe(icon);
+  });
+
+    const titles = document.querySelectorAll(".accordion-title");
+
+  titles.forEach(title => {
+    title.addEventListener("click", () => {
+
+      titles.forEach(other => {
+        if (other !== title) {
+          other.classList.remove("active");
+          other.nextElementSibling.style.maxHeight = null;
+        }
+      });
+
+      title.classList.toggle("active");
+      const content = title.nextElementSibling;
+
+      if (content.style.maxHeight) {
+        content.style.maxHeight = null;
+      } else {
+        content.style.maxHeight = content.scrollHeight + "px";
+      }
+    });
+  });
+  function toggleTip(currentBox) {
+  const allBoxes = document.querySelectorAll('.tip-box');
+
+  allBoxes.forEach(box => {
+    if (box !== currentBox) {
+      box.classList.remove('active');
+      box.querySelector('.arrow').innerText = '▶';
+    }
+  });
+
+  const arrow = currentBox.querySelector('.arrow');
+  currentBox.classList.toggle('active');
+  arrow.innerText = currentBox.classList.contains('active') ? '▼' : '▶';}
 </script>
 </body>
 </html>
