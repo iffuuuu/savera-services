@@ -36,7 +36,16 @@
 </head>
 
   <body>
-    <nav class="navbar">
+
+    <!-- Preloader -->
+    <div id="preloader">
+      <img src="images/Main Logo.png" alt="Savera Services" class="preloader-logo" />
+      <div class="preloader-bar">
+        <div class="preloader-bar-inner"></div>
+      </div>
+    </div>
+
+    <nav class="navbar" id="navbar">
       <div class="nav-container">   
         <div class="logo">
           <img src="images/Main Logo.png" alt="Savera Logo" class="logo-img" />
@@ -52,9 +61,10 @@
       </div>
     </nav>
 
-    <header>
+    <header id="home">
       <div class="header-text" data-aos="fade-right">
-        <h1>Welcome to Savera Services</h1>
+        <div class="badge"><i class="fas fa-shield-alt"></i> Trusted by 9000+ Customers</div>
+        <h1>Welcome to <span>Savera Services</span></h1>
         <p>
 Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO repair in Pune.
  Affordable prices & fast doorstep service.
@@ -116,6 +126,7 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
     <section id="services" class="services">
       <div class="section-divider"></div>
       <h2 data-aos="fade-up">Our Repair Services</h2>
+      <p class="subtitle" data-aos="fade-up">Professional home appliance repair services at your doorstep in Pune</p>
       <div class="icon-container">
   <a href="AC-Repair-Pune.html" class="service-icon" data-aos="fade-up">
     <img src="images/AC/AC.png" alt="AC Repair near me" class="custom-icon">
@@ -123,7 +134,7 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
   </a>
 
   <a href="Fridge-Repair-Pune.html" class="service-icon" data-aos="fade-up">
-    <img src="images/fridge/Fridge repair services near me.png" alt="Fridge Repair near me" class="custom-icon" style="height: 70px;">
+    <img src="images/fridge/Fridge repair services near me.png" alt="Fridge Repair near me" class="custom-icon">
     <span>Fridge Repair</span>
   </a>
 
@@ -176,10 +187,12 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
 
     <footer id="contact" data-aos="fade-up">
       <h2>Contact Us</h2>
-      <p>Email: info@saveraservices.com</p>
-      <p>Phone: +91 7020991141</p>
-      <p>Address: camp, pune, Maharashtra</p>
-      <a href="employes/logain.html" class="logain-btn">logain</a>
+      <div class="contact-info">
+        <p><i class="fas fa-envelope"></i> Email: info@saveraservices.com</p>
+        <p><i class="fas fa-phone"></i> Phone: +91 7020991141</p>
+        <p><i class="fas fa-map-marker-alt"></i> Address: Camp, Pune, Maharashtra</p>
+      </div>
+      <a href="employes/logain.html" class="logain-btn"><i class="fas fa-user-lock"></i> Login</a>
 
       <section class="about-section" id="about-us">
   <div class="container">
@@ -331,6 +344,13 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
 
     <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
     <script>
+      // Preloader
+      window.addEventListener("load", function() {
+        setTimeout(function() {
+          document.getElementById("preloader").classList.add("hidden");
+        }, 800);
+      });
+
       AOS.init({
         duration: 500,
         once: true,
@@ -340,6 +360,16 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
 
       toggle.addEventListener("click", () => {
         links.classList.toggle("active");
+      });
+
+      // Navbar scroll effect
+      const navbar = document.getElementById("navbar");
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
       });
     </script>
     <script>

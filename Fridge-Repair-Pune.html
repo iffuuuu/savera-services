@@ -841,10 +841,10 @@ Refrigerator cooling issue service in Pune,Fixing of Refrigerator in Pune,Refrig
         // Show success tick modal
         const tickModal = document.getElementById("successTickModal");
         tickModal.style.display = "flex";
-        // Hide after 2.5 seconds
+        // Hide after 1 second
         setTimeout(() => {
           tickModal.style.display = "none";
-        }, 2500);
+        }, 1000);
         this.reset();
       })
       .catch(() => alert("Error! Try again."));
