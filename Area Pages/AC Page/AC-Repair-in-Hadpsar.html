@@ -1,4 +1,4 @@
-<!DOCTYPE html>
+﻿<!DOCTYPE html>
 <html lang="en">
 <head>
   <meta charset="UTF-8" />
@@ -728,7 +728,18 @@
         setTimeout(() => {
           tickModal.style.display = "none";
         }, 1000);
-        this.reset();
+                if (typeof gtag === 'function') {
+          gtag('event', 'booking_submit', {
+            event_category: 'conversion',
+            event_label: 'booking_form'
+          });
+        } else if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+          window.dataLayer.push({
+            event: 'booking_submit',
+            event_category: 'conversion',
+            event_label: 'booking_form'
+          });
+        }this.reset();
       })
       .catch(() => alert("Error! Try again."));
   });
@@ -805,4 +816,5 @@
 </script>
 </body>
 </html>
+
 
