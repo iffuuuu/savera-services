@@ -1,0 +1,11 @@
+﻿total_html_files=114
+public_html_files_with_ga4=114
+public_html_files_with_helper=114
+public_html_files_with_phone_tracking=114
+public_html_files_with_whatsapp_tracking=114
+public_html_files_with_booking_success_tracking=113
+booking_form_pages=113
+missing_booking_tracking_files=0
+duplicate_checks=
+no duplicate GA4 snippets or duplicate event listeners found
+missing files list=

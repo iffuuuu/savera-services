@@ -9,6 +9,13 @@
   <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet"/>
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" />
   <link rel="icon" type="image/png" sizes="128x128" href="images/Favicon.png">
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-BGQMNF8C0G"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+  gtag('config', 'G-BGQMNF8C0G');
+</script>
 </head>
 <body>
 
@@ -617,6 +624,46 @@
   currentBox.classList.toggle('active');
   arrow.innerText = currentBox.classList.contains('active') ? '▼' : '▶';}
 </script>
+<script>
+(function() {
+  if (window.SaveraGa4AnalyticsInstalled) return;
+  window.SaveraGa4AnalyticsInstalled = true;
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  function saveraTrackEvent(eventName, params) {
+    if (typeof gtag === 'function') {
+      gtag('event', eventName, params);
+    } else if (window.dataLayer && typeof window.dataLayer.push === 'function') {
+      window.dataLayer.push(Object.assign({ event: eventName }, params));
+    }
+  }
+  function attachGa4LinkTracking(link, eventName, params) {
+    if (link.dataset.saveraGa4Attached === 'true') return;
+    link.addEventListener('click', function() {
+      saveraTrackEvent(eventName, params);
+    });
+    link.dataset.saveraGa4Attached = 'true';
+  }
+  document.addEventListener('DOMContentLoaded', function() {
+    document.querySelectorAll('a[href^="tel:"]').forEach(function(link) {
+      var href = link.getAttribute('href');
+      if (href) {
+        attachGa4LinkTracking(link, 'phone_call_click', {
+          event_category: 'engagement',
+          event_label: href.replace(/^tel:/i, '')
+        });
+      }
+    });
+    document.querySelectorAll('a[href*="wa.me"], a[href*="api.whatsapp.com"]').forEach(function(link) {
+      attachGa4LinkTracking(link, 'whatsapp_click', {
+        event_category: 'engagement',
+        event_label: 'WhatsApp'
+      });
+    });
+  });
+})();
+</script>
 </body>
 </html>
+
 

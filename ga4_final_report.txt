@@ -1,0 +1,11 @@
+﻿total_html_files=114
+public_html_files_with_ga4=114
+public_html_files_with_helper=114
+public_html_files_with_phone_tracking=114
+public_html_files_with_whatsapp_tracking=114
+public_html_files_with_booking_success_tracking=113
+excluded_files=employes (employee/admin pages excluded)
+modified_files_count=0
+files_modified=
+duplicate_checks=
+no duplicate GA4 snippets or duplicate event listeners found

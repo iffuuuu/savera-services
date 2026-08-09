@@ -1,0 +1,230 @@
+﻿total_public_html_files=114
+modified_public_html_files=0
+excluded_files=employes (employee/admin pages excluded)
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\AC-Repair-Pune.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\AC-Repair-Pune.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Cooler-Repair-Pune.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Cooler-Repair-Pune.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Fridge-Repair-Pune.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Fridge-Repair-Pune.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\genrator.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\genrator.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\index.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Microwave-Repair-Pune.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Microwave-Repair-Pune.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\TV-Repair-Pune.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\TV-Repair-Pune.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Washing-Machine-Pune.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Washing-Machine-Pune.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Water-Pureifire-Repair.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Water-Pureifire-Repair.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Aundh.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Aundh.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Balewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Balewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Baner.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Baner.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Bibwewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Bibwewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Camp.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Camp.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Chinchwad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Chinchwad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Dhankawadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Dhankawadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Hadpsar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Hadpsar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Karve-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Karve-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Kharadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Kharadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Kondhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Kondhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Kothrud.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Kothrud.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Magarpatta.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Magarpatta.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Mundhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Mundhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Pimple-Saudagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Pimple-Saudagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Pimpri.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Pimpri.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Shivaji-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Shivaji-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Sinhagad-Road.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Sinhagad-Road.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Viman-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Viman-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Wakad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Wakad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Warje.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\AC Page\AC-Repair-in-Warje.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Aundh.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Aundh.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Balewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Balewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Baner.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Baner.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Bibwewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Bibwewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Camp.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Camp.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Chinchwad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Chinchwad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Dhankawadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Dhankawadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Hadpsar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Hadpsar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Karve-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Karve-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Kharadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Kharadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Kondhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Kondhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Kothrud.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Kothrud.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Magarpatta.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Magarpatta.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Mundhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Mundhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Pimple-Saudagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Pimple-Saudagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Pimpri.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Pimpri.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Shivaji-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Shivaji-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Sinhagad-Road.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Sinhagad-Road.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Viman-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Viman-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Wakad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Wakad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Warje.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Fridge Page\Fridge-Repair-in-Warje.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Aundh.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Aundh.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Balewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Balewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Baner.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Baner.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Bibwewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Bibwewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Camp.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Camp.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Chinchwad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Chinchwad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Dhankawadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Dhankawadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Hadpsar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Hadpsar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Karve-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Karve-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Kharadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Kharadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Kondhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Kondhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Kothrud.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Kothrud.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Magarpatta.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Magarpatta.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Mundhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Mundhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Pimple-Saudagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Pimple-Saudagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Pimpri.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Pimpri.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Shivaji-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Shivaji-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Sinhagad-Road.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Sinhagad-Road.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Viman-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Viman-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Wakad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Wakad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Warje.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Microwave Page\Microwave-Repair-in-Warje.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Aundh.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Aundh.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Balewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Balewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Baner.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Baner.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Bibwewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Bibwewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Camp.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Camp.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Chinchwad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Chinchwad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Dhankawadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Dhankawadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Hadpsar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Hadpsar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Karve-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Karve-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Kharadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Kharadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Kondhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Kondhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Kothrud.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Kothrud.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Magarpatta.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Magarpatta.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Mundhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Mundhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Pimple-Saudagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Pimple-Saudagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Pimpri.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Pimpri.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Shivaji-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Shivaji-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Sinhagad-Road.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Sinhagad-Road.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Viman-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Viman-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Wakad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Wakad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Warje.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\TV Page\TV-Repair-in-Warje.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Aundh.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Aundh.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Balewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Balewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Baner.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Baner.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Bibwewadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Bibwewadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Camp.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Camp.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Chinchwad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Chinchwad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Dhankawadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Dhankawadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Hadpsar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Hadpsar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Karve-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Karve-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Kharadi.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Kharadi.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Kondhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Kondhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Kothrud.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Kothrud.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Magarpatta.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Magarpatta.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Mundhwa.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Mundhwa.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Pimple-Saudagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Pimple-Saudagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Pimpri.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Pimpri.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Shivaji-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Shivaji-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Sinhagad-Road.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Sinhagad-Road.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Viman-Nagar.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Viman-Nagar.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Wakad.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Wakad.html
+Added GA4 snippet to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Warje.html
+Added GA4 click tracking helper to E:\irfan fies\git hub\savera-services\Area Pages\Washing Machine Page\Washing-Machine-Repair-in-Warje.html
