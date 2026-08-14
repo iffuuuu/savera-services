@@ -1,4 +1,4 @@
-$ErrorActionPreference = 'Stop'
+﻿$ErrorActionPreference = 'Stop'
 $rs = [string][char]0x20B9
 
 # ---------------------------------------------------------------
@@ -526,7 +526,7 @@ function Build-Page {
     </p>
     <div class="hero-actions">
       <a href="tel:+917020991141" class="call-btn"><i class="fas fa-phone"></i>Call Now</a>
-      <a href="https://wa.me/917020991141" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
+      <a href="https://wa.me/918793146415" target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp</a>
     </div>
   </div>
 </div>
@@ -914,4 +914,5 @@ foreach ($area in $areas) {
   $index++
 }
 Write-Host "Generated $count pages successfully."
+
 

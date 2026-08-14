@@ -87,7 +87,7 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
             ><i class="fas fa-phone"></i> +91 7020991141</a
           >
           <a
-            href="https://wa.me/917020991141"
+            href="https://wa.me/918793146415"
             target="_blank"
             class="whatsapp-btn"
             ><i class="fab fa-whatsapp"></i> WhatsApp</a
@@ -132,6 +132,48 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
         </div>
       </div>
     </header>
+
+    <!-- Independence Day Special Offer Section -->
+    <section id="independence-offer" class="independence-offer">
+      <div class="offer-container">
+        <div class="offer-badge">
+          <span>🎉</span>
+          <span>Independence Day Special</span>
+        </div>
+        
+        <div class="offer-validity">
+          Valid: 15 August 2026 – 25 August 2026
+        </div>
+
+        <div class="offer-main">
+          <div class="offer-icon">🔧</div>
+          <div class="offer-text">
+            <h2>FREE Visit & Inspection</h2>
+            <p>Zero Booking Fee</p>
+          </div>
+        </div>
+
+        <div class="offer-service">
+          <h3>Fridge Repair Pune</h3>
+          <p>Doorstep Service • Professional Inspection</p>
+        </div>
+
+        <div class="offer-cta-group">
+          <a href="tel:+917020991141" class="offer-btn offer-btn-call">
+            <span>📞</span>
+            <span>Call Now</span>
+          </a>
+          <a href="https://wa.me/918793146415" target="_blank" class="offer-btn offer-btn-whatsapp">
+            <span>💬</span>
+            <span>WhatsApp</span>
+          </a>
+          <button type="button" class="offer-btn offer-btn-book" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">
+            <span>📅</span>
+            <span>Book Service</span>
+          </button>
+        </div>
+      </div>
+    </section>
 
     <section id="services" class="services">
       <div class="section-divider"></div>
@@ -466,5 +508,59 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
   });
 })();
 </script>
+
+  <script>
+(function() {
+  function initializeIndependenceDayOffer() {
+    const offerSection = document.getElementById('independence-offer');
+    if (!offerSection) return;
+
+    function checkOfferValidity() {
+      const today = new Date();
+      const currentYear = today.getFullYear();
+      
+      // Offer is valid from August 15, 2026 to August 25, 2026
+      const offerStartDate = new Date(2026, 7, 15); // August 15, 2026 (month is 0-indexed)
+      const offerEndDate = new Date(2026, 7, 25); // August 25, 2026 (month is 0-indexed)
+      
+      // Set end date to end of day (23:59:59)
+      offerEndDate.setHours(23, 59, 59, 999);
+      
+      // Check if today is within the validity range
+      const isOfferValid = today >= offerStartDate && today <= offerEndDate;
+      
+      return isOfferValid;
+    }
+
+    function updateOfferVisibility() {
+      const isValid = checkOfferValidity();
+      
+      if (isValid) {
+        offerSection.classList.add('visible');
+      } else {
+        offerSection.classList.remove('visible');
+      }
+    }
+
+    // Initial check on page load
+    document.addEventListener('DOMContentLoaded', updateOfferVisibility);
+    
+    // Also run immediately in case DOM is already loaded
+    if (document.readyState === 'loading') {
+      document.addEventListener('DOMContentLoaded', updateOfferVisibility);
+    } else {
+      updateOfferVisibility();
+    }
+  }
+
+  // Initialize when document is ready
+  if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initializeIndependenceDayOffer);
+  } else {
+    initializeIndependenceDayOffer();
+  }
+})();
+</script>
 </body>
 </html>
+
