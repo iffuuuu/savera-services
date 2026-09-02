@@ -577,18 +577,23 @@ header::before {
   .hero-btn-group {
     justify-content: center;
     flex-direction: column;
-    align-items: stretch;
+    align-items: center;
     gap: 10px;
   }
 
-  .hero-btn-group a {
+  .hero-btn-group > * {
+    display: inline-flex;
     justify-content: center;
     width: 100%;
+    max-width: 280px;
   }
 
   .hero-btn, .call-btn, .whatsapp-btn {
     padding: 12px 20px;
     font-size: 0.9rem;
+    width: 100%;
+    max-width: 280px;
+    justify-content: center;
   }
 
   .header-text .badge {
