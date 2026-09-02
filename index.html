@@ -73,24 +73,23 @@
 
     <header id="home">
       <div class="header-text" data-aos="fade-right">
-        <div class="badge"><i class="fas fa-shield-alt"></i> Trusted by 9000+ Customers</div>
-        <h1>Welcome to <span>Savera Services</span></h1>
+        <div class="badge"><i class="fas fa-shield-alt"></i> Pune's Trusted Appliance Repair Experts</div>
+        <h1><span>Home Appliance Repair Services in Pune</span></h1>
         <p>
-Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO repair in Pune.
- Affordable prices & fast doorstep service.
+          Fast and reliable AC, Fridge, Washing Machine, TV, Microwave and RO repair services at your doorstep in Pune.
         </p>
         <div class="hero-btn-group">
-          <a href="#services" class="hero-btn"
-            ><i class="fas fa-calendar-check"></i> Book Now</a
+          <button type="button" class="hero-btn" id="open-universal-booking"
+            ><i class="fas fa-calendar-check"></i> Book Now</button
           >
           <a href="tel:+917020991141" class="call-btn"
-            ><i class="fas fa-phone"></i> +91 7020991141</a
+            ><i class="fas fa-phone"></i> Call Now</a
           >
           <a
-            href="https://wa.me/918793146415"
+            href="https://wa.me/917020991141?text=Hi%20Savera%20Services%2C%20I%20need%20repair%20for%20my%20appliance%20in%20Pune."
             target="_blank"
             class="whatsapp-btn"
-            ><i class="fab fa-whatsapp"></i> WhatsApp</a
+            ><i class="fab fa-whatsapp"></i> WhatsApp Us</a
           >
         </div>
       </div>
@@ -133,47 +132,60 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
       </div>
     </header>
 
-    <!-- Independence Day Special Offer Section -->
-    <section id="independence-offer" class="independence-offer">
-      <div class="offer-container">
-        <div class="offer-badge">
-          <span>🎉</span>
-          <span>Independence Day Special</span>
-        </div>
-        
-        <div class="offer-validity">
-          Valid: 15 August 2026 – 25 August 2026
-        </div>
-
-        <div class="offer-main">
-          <div class="offer-icon">🔧</div>
-          <div class="offer-text">
-            <h2>FREE Visit & Inspection</h2>
-            <p>Zero Booking Fee</p>
+    <div id="universalBookingModal" class="booking-modal" aria-hidden="true">
+      <div class="booking-modal-dialog" role="dialog" aria-modal="true" aria-labelledby="universalBookingTitle">
+        <button type="button" class="booking-modal-close" id="close-universal-booking" aria-label="Close booking form">&times;</button>
+        <h3 id="universalBookingTitle">Book a Repair Service</h3>
+        <form id="universalBookingForm" novalidate>
+          <div class="booking-field">
+            <label for="booking-name">Customer Name <span>*</span></label>
+            <input id="booking-name" name="name" type="text" placeholder="Your Name" required />
           </div>
-        </div>
 
-        <div class="offer-service">
-          <h3>Fridge Repair Pune</h3>
-          <p>Doorstep Service • Professional Inspection</p>
-        </div>
+          <div class="booking-field">
+            <label for="booking-mobile">Mobile Number <span>*</span></label>
+            <input id="booking-mobile" name="mobile" type="tel" inputmode="numeric" placeholder="e.g. 9876543210" required />
+          </div>
 
-        <div class="offer-cta-group">
-          <a href="tel:+917020991141" class="offer-btn offer-btn-call">
-            <span>📞</span>
-            <span>Call Now</span>
-          </a>
-          <a href="https://wa.me/918793146415" target="_blank" class="offer-btn offer-btn-whatsapp">
-            <span>💬</span>
-            <span>WhatsApp</span>
-          </a>
-          <button type="button" class="offer-btn offer-btn-book" onclick="document.getElementById('services').scrollIntoView({behavior: 'smooth'});">
-            <span>📅</span>
-            <span>Book Service</span>
-          </button>
-        </div>
+          <div class="booking-field">
+            <label for="booking-service">Select Service <span>*</span></label>
+            <select id="booking-service" name="service" required>
+              <option value="">Select service</option>
+              <option value="AC Repair">AC Repair</option>
+              <option value="Refrigerator Repair">Refrigerator Repair</option>
+              <option value="Washing Machine Repair">Washing Machine Repair</option>
+              <option value="TV Repair">TV Repair</option>
+              <option value="Microwave Repair">Microwave Repair</option>
+              <option value="Water Purifier / RO Repair">Water Purifier / RO Repair</option>
+              <option value="Air Cooler Repair">Air Cooler Repair</option>
+              <option value="Geyser Repair">Geyser Repair</option>
+              <option value="Generator Repair">Generator Repair</option>
+              <option value="Other">Other</option>
+            </select>
+          </div>
+
+          <div class="booking-field">
+            <label for="booking-address">Area / Location <span>*</span></label>
+            <input id="booking-address" name="address" type="text" placeholder="Your area / locality in Pune" required />
+          </div>
+
+          <div class="booking-field">
+            <label for="booking-description">Problem Description</label>
+            <textarea id="booking-description" name="description" rows="3" placeholder="Briefly describe the issue"></textarea>
+          </div>
+
+          <input type="hidden" name="price" value="To Be Confirmed" />
+
+          <div id="booking-error" class="booking-error" role="alert" aria-live="polite"></div>
+          <div id="booking-success" class="booking-success" aria-live="polite">
+            <strong>Booking Request Received!</strong>
+            <span>We will contact you shortly.</span>
+          </div>
+
+          <button type="submit" class="booking-submit" id="universal-booking-submit">Submit Booking</button>
+        </form>
       </div>
-    </section>
+    </div>
 
     <section id="services" class="services">
       <div class="section-divider"></div>
@@ -246,7 +258,8 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
       <h2>Contact Us</h2>
       <div class="contact-info">
         <p><i class="fas fa-envelope"></i> Email: info@saveraservices.com</p>
-        <p><i class="fas fa-phone"></i> Phone: +91 7020991141</p>
+        <p><i class="fas fa-phone"></i> Phone: <a href="tel:+917020991141">+91 7020991141</a></p>
+        <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/917020991141?text=Hi%20Savera%20Services%2C%20I%20need%20repair%20for%20my%20appliance%20in%20Pune." target="_blank">+91 7020991141</a></p>
         <p><i class="fas fa-map-marker-alt"></i> Address: Camp, Pune, Maharashtra</p>
       </div>
       <a href="employes/logain.html" class="logain-btn"><i class="fas fa-user-lock"></i> Login</a>
@@ -254,6 +267,9 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
       <section class="about-section" id="about-us">
   <div class="container">
     <h1>About Us – Savera Services</h1>
+    <p>
+      Savera Services provides fast, reliable home appliance repair services across Pune for ACs, fridges, washing machines, TVs, microwaves, RO systems, and more. We focus on practical doorstep service, expert support, and convenient repair solutions for homes and businesses.
+    </p>
     <p>
       Welcome to <strong>Savera Services</strong> – your one-stop destination for reliable, affordable, 
       and professional home appliance repair services. In today’s fast-paced world, 
@@ -428,6 +444,153 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
           navbar.classList.remove("scrolled");
         }
       });
+
+      const universalBookingModal = document.getElementById("universalBookingModal");
+      const openUniversalBooking = document.getElementById("open-universal-booking");
+      const closeUniversalBooking = document.getElementById("close-universal-booking");
+      const universalBookingForm = document.getElementById("universalBookingForm");
+      const bookingError = document.getElementById("booking-error");
+      const bookingSuccess = document.getElementById("booking-success");
+      const bookingSubmit = document.getElementById("universal-booking-submit");
+      const scriptURL = 'https://script.google.com/macros/s/AKfycbwEfZiakd4otU2Aocj8o_fczm68SnwC4PavYYPJ9jSYDD3BU9kPnkK_pKgBOQNz8MaEyQ/exec';
+
+      function openUniversalBookingModal() {
+        universalBookingModal.classList.add("show");
+        universalBookingModal.setAttribute("aria-hidden", "false");
+        document.body.style.overflow = "hidden";
+      }
+
+      function closeUniversalBookingModal() {
+        universalBookingModal.classList.remove("show");
+        universalBookingModal.setAttribute("aria-hidden", "true");
+        document.body.style.overflow = "";
+      }
+
+      function showBookingError(message) {
+        bookingError.textContent = message;
+        bookingError.classList.add("visible");
+      }
+
+      function clearBookingError() {
+        bookingError.textContent = "";
+        bookingError.classList.remove("visible");
+      }
+
+      function resetBookingSuccess() {
+        bookingSuccess.classList.remove("visible");
+      }
+
+      openUniversalBooking.addEventListener("click", function () {
+        clearBookingError();
+        resetBookingSuccess();
+        openUniversalBookingModal();
+      });
+
+      closeUniversalBooking.addEventListener("click", function () {
+        closeUniversalBookingModal();
+      });
+
+      universalBookingModal.addEventListener("click", function (event) {
+        if (event.target === universalBookingModal) {
+          closeUniversalBookingModal();
+        }
+      });
+
+      document.addEventListener("keydown", function (event) {
+        if (event.key === "Escape" && universalBookingModal.classList.contains("show")) {
+          closeUniversalBookingModal();
+        }
+      });
+
+      function sanitizeMobile(value) {
+        return value.replace(/\D/g, "");
+      }
+
+      universalBookingForm.addEventListener("submit", function (event) {
+        event.preventDefault();
+
+        const form = event.currentTarget;
+        const name = form.name.value.trim();
+        const mobile = sanitizeMobile(form.mobile.value);
+        const service = form.service.value.trim();
+        const address = form.address.value.trim();
+        const description = form.description.value.trim();
+        const submitButton = bookingSubmit;
+
+        clearBookingError();
+        resetBookingSuccess();
+
+        if (!name) {
+          showBookingError("Please enter your name.");
+          form.name.focus();
+          return;
+        }
+
+        if (!/^[6-9]\d{9}$/.test(mobile)) {
+          showBookingError("Please enter a valid 10-digit Indian mobile number.");
+          form.mobile.focus();
+          return;
+        }
+
+        if (!service) {
+          showBookingError("Please select a service.");
+          form.service.focus();
+          return;
+        }
+
+        if (!address) {
+          showBookingError("Please enter your area or location.");
+          form.address.focus();
+          return;
+        }
+
+        submitButton.disabled = true;
+        submitButton.textContent = "Submitting...";
+
+        const payload = new FormData(form);
+        payload.set("mobile", mobile);
+        payload.set("price", "To Be Confirmed");
+        if (description) {
+          payload.set("description", description);
+        }
+
+        fetch(scriptURL, {
+          method: "POST",
+          body: payload
+        })
+        .then(function (response) {
+          if (!response.ok) {
+            throw new Error("Backend response was not ok");
+          }
+
+          if (typeof gtag === "function") {
+            gtag("event", "booking_submit", {
+              event_category: "conversion",
+              event_label: "booking_form"
+            });
+          } else if (window.dataLayer && typeof window.dataLayer.push === "function") {
+            window.dataLayer.push({
+              event: "booking_submit",
+              event_category: "conversion",
+              event_label: "booking_form"
+            });
+          }
+
+          form.reset();
+          bookingSuccess.classList.add("visible");
+          setTimeout(function () {
+            closeUniversalBookingModal();
+            bookingSuccess.classList.remove("visible");
+          }, 1800);
+        })
+        .catch(function () {
+          showBookingError("Booking failed. Please check your connection and try again.");
+        })
+        .finally(function () {
+          submitButton.disabled = false;
+          submitButton.textContent = "Submit Booking";
+        });
+      });
     </script>
     <script>
       (function () {
@@ -514,58 +677,6 @@ Savera Services – Get expert AC, Fridge, Washing Machine, Microwave, TV & RO r
 })();
 </script>
 
-  <script>
-(function() {
-  function initializeIndependenceDayOffer() {
-    const offerSection = document.getElementById('independence-offer');
-    if (!offerSection) return;
-
-    function checkOfferValidity() {
-      const today = new Date();
-      const currentYear = today.getFullYear();
-      
-      // Offer is valid from August 15, 2026 to August 25, 2026
-      const offerStartDate = new Date(2026, 7, 15); // August 15, 2026 (month is 0-indexed)
-      const offerEndDate = new Date(2026, 7, 25); // August 25, 2026 (month is 0-indexed)
-      
-      // Set end date to end of day (23:59:59)
-      offerEndDate.setHours(23, 59, 59, 999);
-      
-      // Check if today is within the validity range
-      const isOfferValid = today >= offerStartDate && today <= offerEndDate;
-      
-      return isOfferValid;
-    }
-
-    function updateOfferVisibility() {
-      const isValid = checkOfferValidity();
-      
-      if (isValid) {
-        offerSection.classList.add('visible');
-      } else {
-        offerSection.classList.remove('visible');
-      }
-    }
-
-    // Initial check on page load
-    document.addEventListener('DOMContentLoaded', updateOfferVisibility);
-    
-    // Also run immediately in case DOM is already loaded
-    if (document.readyState === 'loading') {
-      document.addEventListener('DOMContentLoaded', updateOfferVisibility);
-    } else {
-      updateOfferVisibility();
-    }
-  }
-
-  // Initialize when document is ready
-  if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initializeIndependenceDayOffer);
-  } else {
-    initializeIndependenceDayOffer();
-  }
-})();
-</script>
 </body>
 </html>
 
