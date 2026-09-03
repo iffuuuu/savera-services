@@ -480,6 +480,18 @@
       }
 
       openUniversalBooking.addEventListener("click", function () {
+        if (typeof gtag === "function") {
+          gtag("event", "book_service_click", {
+            event_category: "engagement",
+            event_label: "Hero CTA"
+          });
+        } else if (window.dataLayer && typeof window.dataLayer.push === "function") {
+          window.dataLayer.push({
+            event: "book_service_click",
+            event_category: "engagement",
+            event_label: "Hero CTA"
+          });
+        }
         clearBookingError();
         resetBookingSuccess();
         openUniversalBookingModal();
