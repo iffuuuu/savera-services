@@ -245,11 +245,96 @@
     <section class="stats" data-aos="fade-up">
       <div class="stat-box">
         <i class="fas fa-users"></i>
-        <h3>500+ Employees</h3>
+        <h3>8+ Employees</h3>
       </div>
       <div class="stat-box">
         <i class="fas fa-user-check"></i>
-        <h3>9000+ Trusted Customers</h3>
+        <h3>2500+ Trusted Customers</h3>
+      </div>
+    </section>
+
+    <section class="reviews-trust" aria-label="Customer reviews and trust">
+      <div class="reviews-trust-inner">
+        <div class="reviews-trust-copy" data-aos="fade-right">
+          <div class="trust-kicker">Customer Reviews</div>
+          <h2>Why Customers Trust Savera Services</h2>
+          <p class="trust-subtitle">86+ Customers have shared their experience with us.</p>
+
+          <div class="customer-avatars" aria-label="Customer profile images">
+            <img src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Customer profile 1" />
+            <img src="https://images.unsplash.com/photo-1494790108377-be9c29b29330?auto=format&fit=crop&w=200&q=80" alt="Customer profile 2" />
+            <img src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Customer profile 3" />
+            <img src="https://images.unsplash.com/photo-1438761681033-6461ffad8d80?auto=format&fit=crop&w=200&q=80" alt="Customer profile 4" />
+            <img src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Customer profile 5" />
+          </div>
+
+          <ul class="trust-points" aria-label="Trust points">
+            <li><span class="point-icon">⭐</span> 86+ Google Reviews</li>
+            <li><span class="point-icon">🛠</span> Experienced Technicians</li>
+            <li><span class="point-icon">🛡</span> 45 Days Service Guarantee</li>
+          </ul>
+        </div>
+
+        <div class="reviews-slider-wrap" data-aos="fade-left">
+          <div class="reviews-slider" id="reviews-slider">
+            <div class="reviews-track" id="reviews-track">
+              <article class="review-card">
+                <div class="review-header">
+                  <img class="review-avatar" src="https://images.unsplash.com/photo-1544005313-94ddf0286df2?auto=format&fit=crop&w=200&q=80" alt="Customer profile" />
+                  <div class="review-meta">
+                    <h3>Customer Name</h3>
+                    <time>Pune</time>
+                  </div>
+                </div>
+                <div class="review-stars" aria-label="Customer rating">★★★★★</div>
+                <p class="review-text">Add your real customer review text here. Replace this placeholder with actual feedback from your customers when you are ready.</p>
+                <div class="review-google" aria-label="Google review"><i class="fab fa-google"></i></div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img class="review-avatar" src="https://images.unsplash.com/photo-1506794778202-cad84cf45f1d?auto=format&fit=crop&w=200&q=80" alt="Customer profile" />
+                  <div class="review-meta">
+                    <h3>Customer Name</h3>
+                    <time>Pune</time>
+                  </div>
+                </div>
+                <div class="review-stars" aria-label="Customer rating">★★★★★</div>
+                <p class="review-text">Add your real customer review text here. Replace this placeholder with actual feedback from your customers when you are ready.</p>
+                <div class="review-google" aria-label="Google review"><i class="fab fa-google"></i></div>
+              </article>
+
+              <article class="review-card">
+                <div class="review-header">
+                  <img class="review-avatar" src="https://images.unsplash.com/photo-1500648767791-00dcc994a43e?auto=format&fit=crop&w=200&q=80" alt="Customer profile" />
+                  <div class="review-meta">
+                    <h3>Customer Name</h3>
+                    <time>Pune</time>
+                  </div>
+                </div>
+                <div class="review-stars" aria-label="Customer rating">★★★★★</div>
+                <p class="review-text">Add your real customer review text here. Replace this placeholder with actual feedback from your customers when you are ready.</p>
+                <div class="review-google" aria-label="Google review"><i class="fab fa-google"></i></div>
+              </article>
+            </div>
+          </div>
+
+          <div class="reviews-nav">
+            <button class="review-arrow prev" type="button" aria-label="Previous review">
+              <i class="fas fa-chevron-left"></i>
+            </button>
+
+            <div class="review-dots" aria-label="Review pagination">
+              <button class="review-dot is-active" type="button" aria-label="Go to review 1"></button>
+              <button class="review-dot" type="button" aria-label="Go to review 2"></button>
+              <button class="review-dot" type="button" aria-label="Go to review 3"></button>
+            </div>
+
+            <button class="review-arrow next" type="button" aria-label="Next review">
+              <i class="fas fa-chevron-right"></i>
+            </button>
+          </div>
+        </div>
       </div>
     </section>
 
@@ -648,6 +733,142 @@
         });
       })();
     </script>
+
+    <script>
+(function () {
+
+  const slider = document.getElementById('reviews-slider');
+  const track = document.getElementById('reviews-track');
+
+  if (!slider || !track) return;
+
+  const cards = Array.from(track.children);
+
+  const prevBtn = document.querySelector('.review-arrow.prev');
+  const nextBtn = document.querySelector('.review-arrow.next');
+
+  const dots = Array.from(
+    document.querySelectorAll('.review-dot')
+  );
+
+  let currentIndex = 0;
+
+  function getVisibleCards() {
+    return window.innerWidth <= 640 ? 1 : 2;
+  }
+
+  function updateSlider() {
+
+    const visibleCards = getVisibleCards();
+
+    const maxIndex = Math.max(
+      cards.length - visibleCards,
+      0
+    );
+
+    currentIndex = Math.min(
+      currentIndex,
+      maxIndex
+    );
+
+    const cardWidth = cards[0].offsetWidth;
+
+    const styles = window.getComputedStyle(track);
+
+    const gap = parseFloat(
+      styles.gap
+    ) || 0;
+
+    const moveAmount =
+      currentIndex * (cardWidth + gap);
+
+    track.style.transform =
+      `translateX(-${moveAmount}px)`;
+
+    dots.forEach((dot, index) => {
+
+      dot.classList.toggle(
+        'is-active',
+        index === currentIndex
+      );
+
+    });
+
+  }
+
+  if (prevBtn) {
+
+    prevBtn.addEventListener(
+      'click',
+      function () {
+
+        currentIndex = Math.max(
+          currentIndex - 1,
+          0
+        );
+
+        updateSlider();
+
+      }
+    );
+
+  }
+
+  if (nextBtn) {
+
+    nextBtn.addEventListener(
+      'click',
+      function () {
+
+        const maxIndex = Math.max(
+          cards.length - getVisibleCards(),
+          0
+        );
+
+        currentIndex = Math.min(
+          currentIndex + 1,
+          maxIndex
+        );
+
+        updateSlider();
+
+      }
+    );
+
+  }
+
+  dots.forEach((dot, index) => {
+
+    dot.addEventListener(
+      'click',
+      function () {
+
+        const maxIndex = Math.max(
+          cards.length - getVisibleCards(),
+          0
+        );
+
+        currentIndex = Math.min(
+          index,
+          maxIndex
+        );
+
+        updateSlider();
+
+      }
+    );
+
+  });
+
+  window.addEventListener(
+    'resize',
+    updateSlider
+  );
+
+  updateSlider();
+
+})();
+</script>
   <script>
 (function() {
   if (window.SaveraGa4AnalyticsInstalled) return;
