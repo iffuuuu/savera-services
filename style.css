@@ -831,7 +831,8 @@ header::before {
   display: flex;
   flex-direction: column;
   align-items: center;
-  gap: 12px;
+  justify-content: center;
+  gap: 8px;
   transition: all 0.4s var(--ease-out);
   box-shadow: var(--shadow-sm);
   border: 1px solid var(--gray-100);
@@ -871,16 +872,30 @@ header::before {
   transform: scale(1.15) rotate(-4deg);
 }
 
-.service-icon span {
-  font-size: 0.95rem;
-  font-weight: 600;
-  color: var(--gray-700);
+.service-name,
+.service-action {
+  display: block;
   position: relative;
   z-index: 1;
   transition: color 0.3s var(--ease-out);
 }
 
-.service-icon:hover span {
+.service-name {
+  font-size: 0.95rem;
+  font-weight: 600;
+  color: var(--gray-700);
+}
+
+.service-action {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.02em;
+  color: var(--accent);
+  white-space: nowrap;
+}
+
+.service-icon:hover .service-name,
+.service-icon:hover .service-action {
   color: var(--accent);
 }
 
