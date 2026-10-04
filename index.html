@@ -398,6 +398,21 @@
               <i class="fas fa-chevron-right"></i>
             </button>
           </div>
+
+          <button type="button" class="hero-btn review-booking-cta" id="reviews-booking-cta">Book a Repair Service →</button>
+        </div>
+      </div>
+    </section>
+
+    <section class="final-cta-section" aria-label="Final service CTA">
+      <div class="final-cta-inner">
+        <h2>Need Appliance Repair in Pune?</h2>
+        <p>Fast doorstep appliance repair service across Pune.</p>
+
+        <div class="final-cta-actions">
+          <a href="tel:+917020991141" class="call-btn"><i class="fas fa-phone"></i> Call Now</a>
+          <a href="https://wa.me/917020991141?text=Hi%20Savera%20Services%2C%20I%20need%20repair%20for%20my%20appliance%20in%20Pune." target="_blank" class="whatsapp-btn"><i class="fab fa-whatsapp"></i> WhatsApp Now</a>
+          <button type="button" class="hero-btn final-booking-cta" id="final-booking-cta"><i class="fas fa-calendar-check"></i> Book Service</button>
         </div>
       </div>
     </section>
@@ -405,12 +420,15 @@
     <footer id="contact" data-aos="fade-up">
       <h2>Contact Us</h2>
       <div class="contact-info">
-        <p><i class="fas fa-envelope"></i> Email: info@saveraservices.com</p>
+        <p><i class="fas fa-envelope"></i> Email: <a href="mailto:info@saveraservices.com">info@saveraservices.com</a></p>
         <p><i class="fas fa-phone"></i> Phone: <a href="tel:+917020991141">+91 7020991141</a></p>
         <p><i class="fab fa-whatsapp"></i> WhatsApp: <a href="https://wa.me/917020991141?text=Hi%20Savera%20Services%2C%20I%20need%20repair%20for%20my%20appliance%20in%20Pune." target="_blank">+91 7020991141</a></p>
         <p><i class="fas fa-map-marker-alt"></i> Address: Camp, Pune, Maharashtra</p>
       </div>
-      <a href="employes/logain.html" class="logain-btn"><i class="fas fa-user-lock"></i> Login</a>
+      <div class="footer-cta-row">
+        <button type="button" class="hero-btn footer-booking-cta" id="footer-booking-cta"><i class="fas fa-calendar-check"></i> Book Service</button>
+        <a href="employes/logain.html" class="logain-btn"><i class="fas fa-user-lock"></i> Login</a>
+      </div>
 
       <section class="about-section" id="about-us">
   <div class="container">
@@ -614,21 +632,7 @@
         document.body.style.overflow = "";
       }
 
-      function showBookingError(message) {
-        bookingError.textContent = message;
-        bookingError.classList.add("visible");
-      }
-
-      function clearBookingError() {
-        bookingError.textContent = "";
-        bookingError.classList.remove("visible");
-      }
-
-      function resetBookingSuccess() {
-        bookingSuccess.classList.remove("visible");
-      }
-
-      openUniversalBooking.addEventListener("click", function () {
+      function triggerUniversalBooking() {
         if (typeof gtag === "function") {
           gtag("event", "book_service_click", {
             event_category: "engagement",
@@ -644,7 +648,26 @@
         clearBookingError();
         resetBookingSuccess();
         openUniversalBookingModal();
-      });
+      }
+
+      function showBookingError(message) {
+        bookingError.textContent = message;
+        bookingError.classList.add("visible");
+      }
+
+      function clearBookingError() {
+        bookingError.textContent = "";
+        bookingError.classList.remove("visible");
+      }
+
+      function resetBookingSuccess() {
+        bookingSuccess.classList.remove("visible");
+      }
+
+      openUniversalBooking.addEventListener("click", triggerUniversalBooking);
+      document.getElementById("reviews-booking-cta")?.addEventListener("click", triggerUniversalBooking);
+      document.getElementById("final-booking-cta")?.addEventListener("click", triggerUniversalBooking);
+      document.getElementById("footer-booking-cta")?.addEventListener("click", triggerUniversalBooking);
 
       closeUniversalBooking.addEventListener("click", function () {
         closeUniversalBookingModal();

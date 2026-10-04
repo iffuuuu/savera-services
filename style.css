@@ -608,6 +608,100 @@ header::before {
   font-family: inherit;
 }
 
+.review-booking-cta {
+  margin-top: 18px;
+  width: 100%;
+  max-width: 280px;
+  justify-content: center;
+}
+
+.final-cta-section {
+  padding: 32px 20px 12px;
+}
+
+.final-cta-inner {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 36px 24px;
+  text-align: center;
+  border-radius: var(--radius-xl);
+  background: linear-gradient(135deg, rgba(37,99,235,0.08), rgba(13,148,136,0.06));
+  border: 1px solid rgba(37,99,235,0.12);
+  box-shadow: var(--shadow-sm);
+}
+
+.final-cta-inner h2 {
+  font-size: clamp(2rem, 4vw, 2.8rem);
+  margin-bottom: 10px;
+}
+
+.final-cta-inner p {
+  font-size: 1.05rem;
+  color: var(--gray-600);
+  margin-bottom: 22px;
+}
+
+.final-cta-actions {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 12px;
+}
+
+.final-cta-actions > * {
+  width: 100%;
+  max-width: 240px;
+  justify-content: center;
+}
+
+.footer-cta-row {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+  gap: 12px;
+  margin-top: 18px;
+}
+
+.footer-booking-cta {
+  width: auto;
+  max-width: none;
+}
+
+@media (max-width: 768px) {
+  .review-booking-cta {
+    max-width: 100%;
+    width: 100%;
+  }
+
+  .final-cta-section {
+    padding: 24px 16px 8px;
+  }
+
+  .final-cta-inner {
+    padding: 28px 18px;
+  }
+
+  .final-cta-actions {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .final-cta-actions > * {
+    max-width: 280px;
+    width: 100%;
+  }
+
+  .footer-cta-row {
+    flex-direction: column;
+  }
+
+  .footer-booking-cta {
+    width: 100%;
+    max-width: 280px;
+  }
+}
+
 .booking-modal {
   position: fixed;
   inset: 0;
